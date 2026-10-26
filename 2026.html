@@ -1,0 +1,2413 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>北海道冬季婚禮 & 家族雪國之旅 2026</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Google Fonts & jf-openhuninn (粉圓體) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/justfont/open-huninn-font@1.1/font/font.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            book: {
+              bg: '#FFFCF6',       // 和紙白底色
+              ink: '#3E3A39',      // 3px 墨灰邊框與主要文字
+              paper: '#FFFFFF',    // 紙白
+              card: '#FFF9ED',     // 奶油米黃
+              coral: '#F2A497',    // 珊瑚粉
+              coralLight: '#FDEAE7',
+              yellow: '#F6D27A',   // 山吹黃
+              yellowLight: '#FEF6DF',
+              water: '#A8D3E6',    // 水色 (冰藍)
+              waterLight: '#EDF6FA',
+              bamboo: '#B9DAA5',   // 若竹綠
+              bambooLight: '#EFF8EA',
+              gray: '#78726D',     // 次要灰色文字
+              badge: '#F3EFE6'     // 輔助標籤
+            }
+          },
+          fontFamily: {
+            huninn: ['"jf-openhuninn"', '"Zen Maru Gothic"', 'sans-serif'],
+            sans: ['"jf-openhuninn"', '"Zen Maru Gothic"', 'sans-serif']
+          },
+          boxShadow: {
+            'book': '3px 3px 0px #3E3A39',
+            'book-lg': '5px 5px 0px #3E3A39',
+            'book-sm': '2px 2px 0px #3E3A39',
+            'book-active': '1px 1px 0px #3E3A39'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* 全域字體與繪本樣式 */
+    body {
+      background-color: #FFFCF6;
+      color: #3E3A39;
+      font-family: 'jf-openhuninn', 'Zen Maru Gothic', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+      user-select: auto;
+    }
+
+    /* 3px 墨灰實心線 */
+    .border-ink {
+      border: 3px solid #3E3A39;
+    }
+    .border-ink-2 {
+      border: 2px solid #3E3A39;
+    }
+    .border-b-ink {
+      border-bottom: 3px solid #3E3A39;
+    }
+    .border-t-ink {
+      border-top: 3px solid #3E3A39;
+    }
+
+    /* 日系可愛微動態效果 */
+    @keyframes gentleSway {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-4px) rotate(1.2deg); }
+    }
+    @keyframes softFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+    }
+    @keyframes bounceInPop {
+      0% { opacity: 0; transform: scale(0.96) translateY(8px); }
+      70% { transform: scale(1.01) translateY(-2px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .anim-sway {
+      animation: gentleSway 4.5s ease-in-out infinite;
+    }
+    .anim-float {
+      animation: softFloat 3.8s ease-in-out infinite;
+    }
+    .tab-pop-anim {
+      animation: bounceInPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    /* 支援減少動態效果 (prefers-reduced-motion) */
+    @media (prefers-reduced-motion: reduce) {
+      .anim-sway, .anim-float, .tab-pop-anim {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+
+    /* 隱藏滾動條但保持滾動 */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* 自定義按鈕反饋效果 */
+    .btn-press:active {
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0px #3E3A39 !important;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col justify-between selection:bg-book-yellow selection:text-book-ink">
+
+  <!-- ==================== 頂部簡約小標題與即時倒數 ==================== -->
+  <header class="bg-[#FFFCF6] border-b-ink sticky top-0 z-40">
+    <div class="max-w-md mx-auto px-4 py-2.5 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-full bg-book-water border-ink-2 flex items-center justify-center anim-sway">
+          <i class="fa-solid fa-snowflake text-white text-xs"></i>
+        </div>
+        <div>
+          <span class="text-[10px] tracking-wider text-book-gray block leading-none font-bold">2026 WINTER HOKKAIDO</span>
+          <h1 class="text-sm font-black text-book-ink leading-tight">北海道雪國婚禮・家族之旅</h1>
+        </div>
+      </div>
+
+      <div class="px-2.5 py-1 bg-book-coralLight border-ink-2 rounded-xl text-[11px] font-black text-book-ink shadow-book-sm">
+        倒數 <span id="days-count" class="text-book-coral font-black">--</span> 天
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT CONTAINER (底部預留空間避開固定選單) ==================== -->
+  <main class="flex-grow max-w-md mx-auto w-full px-4 pt-3 pb-28 space-y-4">
+
+    <!-- ==================== TAB 1: PLAN (每日行程) ==================== -->
+    <div id="tab-plan" class="tab-content block space-y-4">
+
+      <!-- 首頁手繪風英雄插畫卡片 -->
+      <div class="bg-book-card border-ink rounded-3xl p-4 shadow-book relative overflow-hidden">
+        <div class="w-full flex justify-center mb-2">
+          <!-- 原創手繪感平塗 SVG 插圖 -->
+          <svg viewBox="0 0 340 130" class="w-full h-auto max-h-32 drop-shadow-sm anim-sway" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 95 Q 55 45 95 95 Z" fill="#A8D3E6" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M40 70 Q 55 55 70 70 Z" fill="#FFFFFF" stroke="#3E3A39" stroke-width="2"/>
+            <path d="M80 100 Q 140 30 190 100 Z" fill="#EDF6FA" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M115 65 Q 140 40 160 65 Z" fill="#FFFFFF" stroke="#3E3A39" stroke-width="2"/>
+            <polygon points="265,95 275,70 285,95" fill="#B9DAA5" stroke="#3E3A39" stroke-width="2"/>
+            <polygon points="278,95 288,75 298,95" fill="#B9DAA5" stroke="#3E3A39" stroke-width="2"/>
+            <polygon points="30,105 38,85 46,105" fill="#B9DAA5" stroke="#3E3A39" stroke-width="2"/>
+            <rect x="180" y="70" width="40" height="30" fill="#FFFFFF" stroke="#3E3A39" stroke-width="3"/>
+            <polygon points="175,70 200,45 225,70" fill="#F2A497" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+            <line x1="200" y1="52" x2="200" y2="40" stroke="#3E3A39" stroke-width="2.5"/>
+            <line x1="195" y1="44" x2="205" y2="44" stroke="#3E3A39" stroke-width="2.5"/>
+            <line x1="240" y1="75" x2="240" y2="98" stroke="#3E3A39" stroke-width="3"/>
+            <line x1="233" y1="82" x2="247" y2="82" stroke="#3E3A39" stroke-width="3"/>
+            <rect x="75" y="82" width="65" height="28" rx="8" fill="#F6D27A" stroke="#3E3A39" stroke-width="3"/>
+            <rect x="82" y="87" width="16" height="10" rx="3" fill="#FFFFFF" stroke="#3E3A39" stroke-width="2"/>
+            <rect x="103" y="87" width="16" height="10" rx="3" fill="#FFFFFF" stroke="#3E3A39" stroke-width="2"/>
+            <circle cx="90" cy="110" r="5" fill="#3E3A39"/>
+            <circle cx="125" cy="110" r="5" fill="#3E3A39"/>
+            <circle cx="58" cy="98" r="8" fill="#FFFFFF" stroke="#3E3A39" stroke-width="2"/>
+            <circle cx="58" cy="85" r="5.5" fill="#FFFFFF" stroke="#3E3A39" stroke-width="2"/>
+            <polygon points="56,86 63,86 58,89" fill="#F2A497"/>
+            <circle cx="56" cy="83" r="1" fill="#3E3A39"/>
+            <circle cx="60" cy="83" r="1" fill="#3E3A39"/>
+            <path d="M0 102 Q 80 98 170 102 T 340 102 L 340 135 L 0 135 Z" fill="#FFFFFF" stroke="#3E3A39" stroke-width="3"/>
+          </svg>
+        </div>
+
+        <div class="text-center">
+          <span class="inline-block px-3 py-0.5 bg-book-yellow border-ink-2 rounded-full text-[11px] font-black text-book-ink mb-1">
+            <i class="fa-solid fa-heart text-book-coral mr-1"></i> 北海道冬季婚禮 & 家族旅遊
+          </span>
+          <h2 class="text-lg font-black text-book-ink">雪白浪漫・北海道六日行</h2>
+          <p class="text-xs text-book-gray font-bold mt-0.5">2026.12.11 (五) － 12.16 (三) ｜ 闔家同樂</p>
+        </div>
+
+        <div class="mt-2.5 bg-white border-ink-2 rounded-2xl p-2.5 flex items-center justify-between text-center">
+          <div class="flex-1 border-r-2 border-book-ink/20">
+            <div class="text-[10px] text-book-gray font-bold">預定出發日</div>
+            <div class="text-xs font-black text-book-ink">2026/12/11</div>
+          </div>
+          <div class="flex-1 border-r-2 border-book-ink/20">
+            <div class="text-[10px] text-book-gray font-bold">出發倒數</div>
+            <div class="text-base font-black text-book-coral" id="banner-days">-- 天</div>
+          </div>
+          <div class="flex-1">
+            <div class="text-[10px] text-book-gray font-bold">旅行狀態</div>
+            <div class="text-xs font-black text-book-bamboo">期待相聚</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 航班卡片 (加入搭乘人員標籤) -->
+      <div class="bg-book-waterLight border-ink rounded-3xl p-3.5 shadow-book">
+        <div class="flex items-center justify-between font-black text-xs text-book-ink mb-2">
+          <div class="flex items-center gap-1.5">
+            <i class="fa-solid fa-plane-departure text-book-water"></i> 家族航班安排與搭乘人員
+          </div>
+          <span class="text-[10px] text-book-gray bg-white px-2 py-0.5 rounded-lg border-ink-2">共 4 班次</span>
+        </div>
+        
+        <div class="grid grid-cols-1 gap-2 text-[11px] font-bold">
+          <!-- 航班 1 -->
+          <div class="bg-white p-2.5 rounded-2xl border-ink-2 flex items-center justify-between shadow-book-sm">
+            <div>
+              <div class="flex items-center gap-1.5">
+                <span class="px-2 py-0.5 rounded-lg bg-book-yellow text-book-ink font-black text-[10px] border-ink-2">長榮 BR166</span>
+                <span class="font-black text-book-ink">06:15 桃機 ➔ 11:00 新千歲</span>
+              </div>
+              <div class="text-[10px] text-book-gray mt-1">
+                搭乘人員：<span class="text-book-coral font-black text-xs">秉原、佑珊</span>
+              </div>
+            </div>
+            <span class="text-xs text-book-bamboo font-black"><i class="fa-solid fa-check"></i> 早鳥組</span>
+          </div>
+
+          <!-- 航班 2 -->
+          <div class="bg-white p-2.5 rounded-2xl border-ink-2 flex items-center justify-between shadow-book-sm">
+            <div>
+              <div class="flex items-center gap-1.5">
+                <span class="px-2 py-0.5 rounded-lg bg-book-coral text-white font-black text-[10px] border-ink-2">華航 CI130</span>
+                <span class="font-black text-book-ink">08:35 桃機 ➔ 13:20 新千歲</span>
+              </div>
+              <div class="text-[10px] text-book-gray mt-1">
+                搭乘人員：<span class="text-book-coral font-black text-xs">雅琪</span>
+              </div>
+            </div>
+            <span class="text-[10px] text-book-water font-black">第1班接駁</span>
+          </div>
+
+          <!-- 航班 3 -->
+          <div class="bg-white p-2.5 rounded-2xl border-ink-2 flex items-center justify-between shadow-book-sm">
+            <div>
+              <div class="flex items-center gap-1.5">
+                <span class="px-2 py-0.5 rounded-lg bg-book-water text-book-ink font-black text-[10px] border-ink-2">長榮 BR116</span>
+                <span class="font-black text-book-ink">09:30 桃機 ➔ 14:05 新千歲</span>
+              </div>
+              <div class="text-[10px] text-book-gray mt-1">
+                搭乘人員：<span class="text-book-coral font-black text-xs">芷涵</span>
+              </div>
+            </div>
+            <span class="text-[10px] text-book-yellow font-black">第2班接駁</span>
+          </div>
+
+          <!-- 航班 4 -->
+          <div class="bg-white p-2.5 rounded-2xl border-ink-2 flex items-center justify-between shadow-book-sm">
+            <div>
+              <div class="flex items-center gap-1.5">
+                <span class="px-2 py-0.5 rounded-lg bg-book-bamboo text-book-ink font-black text-[10px] border-ink-2">星宇 JX850</span>
+                <span class="font-black text-book-ink">09:20 桃機 ➔ 14:05 新千歲</span>
+              </div>
+              <div class="text-[10px] text-book-gray mt-1">
+                搭乘人員：<span class="text-book-coral font-black text-xs">雅玲、秉輝</span>
+              </div>
+            </div>
+            <span class="text-[10px] text-book-yellow font-black">第2班接駁</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 住宿飯店資訊 (附 Google Maps 一鍵直連按鈕) -->
+      <div class="bg-book-coralLight border-ink rounded-3xl p-3.5 shadow-book space-y-2">
+        <div class="flex items-center justify-between font-black text-xs text-book-ink">
+          <div class="flex items-center gap-1.5">
+            <i class="fa-solid fa-hotel text-book-coral"></i> 住宿飯店（點擊直接導航）
+          </div>
+          <span class="text-[10px] text-book-coral font-black">2 處住宿</span>
+        </div>
+
+        <div class="space-y-2 text-[11px] font-bold">
+          <!-- 飯店 1: 星野 -->
+          <div class="bg-white p-2.5 rounded-2xl border-ink-2 space-y-1 shadow-book-sm">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black text-book-ink">星野度假村 Tomamu The Tower</span>
+              <span class="text-[10px] bg-book-coral text-white px-2 py-0.5 rounded-lg border-ink-2">12/11 - 12/13 (2晚)</span>
+            </div>
+            <div class="text-[10px] text-book-gray">北海道勇払郡占冠村中トマム ｜ 婚禮所在地</div>
+            <div class="pt-1 flex justify-end">
+              <a href="https://www.google.com/maps/search/?api=1&query=Hoshino+Resorts+Tomamu+The+Tower" target="_blank" class="inline-flex items-center gap-1 px-2.5 py-1 bg-book-card hover:bg-book-yellow border-ink-2 rounded-xl text-[11px] font-black shadow-book-sm btn-press">
+                <i class="fa-solid fa-location-dot text-book-coral"></i> 開啟 Google Maps
+              </a>
+            </div>
+          </div>
+
+          <!-- 飯店 2: 札幌市區飯店 (兩間供親友各取所需) -->
+          <div class="bg-white p-2.5 rounded-2xl border-ink-2 space-y-1.5 shadow-book-sm">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black text-book-ink">SAPPORO HOTEL by GRANBELL</span>
+              <span class="text-[10px] bg-book-water text-book-ink px-2 py-0.5 rounded-lg border-ink-2">12/13 - 12/16 (3晚)</span>
+            </div>
+            <div class="text-[10px] text-book-gray">札幌中央區 ｜ 露天頂樓浴場、鄰近市區商圈</div>
+            <div class="flex justify-between items-center pt-0.5">
+              <span class="text-[10px] text-book-gray">市區主力飯店</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=SAPPORO+HOTEL+by+GRANBELL" target="_blank" class="inline-flex items-center gap-1 px-2.5 py-1 bg-book-card hover:bg-book-yellow border-ink-2 rounded-xl text-[11px] font-black shadow-book-sm btn-press">
+                <i class="fa-solid fa-location-dot text-book-coral"></i> 開啟 Google Maps
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white p-2.5 rounded-2xl border-ink-2 space-y-1.5 shadow-book-sm">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black text-book-ink">JR Inn 札幌站南口 (JR Inn Sapporo South)</span>
+              <span class="text-[10px] bg-book-bamboo text-book-ink px-2 py-0.5 rounded-lg border-ink-2">12/13 - 12/16 (3晚)</span>
+            </div>
+            <div class="text-[10px] text-book-gray">中央區北3條西1丁目 ｜ 近地下鐵大通站與札幌站</div>
+            <div class="flex justify-between items-center pt-0.5">
+              <span class="text-[10px] text-book-gray">交通樞紐便利</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=JR+Inn+Sapporo+South" target="_blank" class="inline-flex items-center gap-1 px-2.5 py-1 bg-book-card hover:bg-book-yellow border-ink-2 rounded-xl text-[11px] font-black shadow-book-sm btn-press">
+                <i class="fa-solid fa-location-dot text-book-coral"></i> 開啟 Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 日程切換標籤 (Day 1 - Day 6) -->
+      <div class="space-y-1.5">
+        <div class="flex items-center justify-between text-xs font-black text-book-ink px-1">
+          <span><i class="fa-regular fa-calendar-check mr-1 text-book-coral"></i>選擇活動日程</span>
+          <span class="text-[11px] text-book-gray">左右滑動切換天數</span>
+        </div>
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 px-0.5" id="day-bar">
+          <button onclick="selectDay(1)" data-day="1" class="day-tab flex-shrink-0 px-3 py-2 rounded-2xl border-ink-2 font-black text-xs bg-book-yellow shadow-book-sm btn-press">
+            <span class="text-[10px] block opacity-80">12/11 (五)</span>D1 機場·星野
+          </button>
+          <button onclick="selectDay(2)" data-day="2" class="day-tab flex-shrink-0 px-3 py-2 rounded-2xl border-ink-2 font-black text-xs bg-white shadow-book-sm btn-press">
+            <span class="text-[10px] block opacity-80 text-book-coral font-black">12/12 (六)</span>D2 婚禮大日
+          </button>
+          <button onclick="selectDay(3)" data-day="3" class="day-tab flex-shrink-0 px-3 py-2 rounded-2xl border-ink-2 font-black text-xs bg-white shadow-book-sm btn-press">
+            <span class="text-[10px] block opacity-80">12/13 (日)</span>D3 移往札幌
+          </button>
+          <button onclick="selectDay(4)" data-day="4" class="day-tab flex-shrink-0 px-3 py-2 rounded-2xl border-ink-2 font-black text-xs bg-white shadow-book-sm btn-press">
+            <span class="text-[10px] block opacity-80">12/14 (一)</span>D4 小樽漫遊
+          </button>
+          <button onclick="selectDay(5)" data-day="5" class="day-tab flex-shrink-0 px-3 py-2 rounded-2xl border-ink-2 font-black text-xs bg-white shadow-book-sm btn-press">
+            <span class="text-[10px] block opacity-80">12/15 (二)</span>D5 滑雪血拼
+          </button>
+          <button onclick="selectDay(6)" data-day="6" class="day-tab flex-shrink-0 px-3 py-2 rounded-2xl border-ink-2 font-black text-xs bg-white shadow-book-sm btn-press">
+            <span class="text-[10px] block opacity-80">12/16 (三)</span>D6 快樂返台
+          </button>
+        </div>
+      </div>
+
+      <!-- 動態每日時間軸容器 -->
+      <div id="day-timeline-container" class="space-y-3 min-h-[300px]">
+        <!-- 內容由 JavaScript 注入 -->
+      </div>
+    </div>
+
+    <!-- ==================== TAB 2: GUIDE (深度導覽：依地點分區與背景名勝) ==================== -->
+    <div id="tab-guide" class="tab-content hidden space-y-4">
+      
+      <!-- 導覽頁頂部導航分類 -->
+      <div class="bg-book-card border-ink rounded-3xl p-4 shadow-book text-center">
+        <span class="inline-block px-3 py-0.5 bg-book-water border-ink-2 rounded-full text-[11px] font-black text-book-ink mb-1">
+          <i class="fa-solid fa-map mr-1"></i> 地點分區・城市背景深度漫遊
+        </span>
+        <h2 class="text-base font-black text-book-ink">雪國景點與文化背景導覽</h2>
+        <p class="text-[11px] text-book-gray font-bold">小樽與札幌皆分開獨立介紹，包含歷史開拓與周邊精選名勝</p>
+
+        <!-- 分區切換鈕 -->
+        <div class="flex justify-center gap-2 mt-3">
+          <button onclick="switchGuideSection('tomamu')" id="btn-guide-tomamu" class="guide-nav-btn px-3 py-1.5 rounded-xl border-ink-2 text-xs font-black bg-book-yellow shadow-book-sm">
+            星野 TOMAMU 篇
+          </button>
+          <button onclick="switchGuideSection('otaru')" id="btn-guide-otaru" class="guide-nav-btn px-3 py-1.5 rounded-xl border-ink-2 text-xs font-black bg-white shadow-book-sm">
+            小樽漫遊篇
+          </button>
+          <button onclick="switchGuideSection('sapporo')" id="btn-guide-sapporo" class="guide-nav-btn px-3 py-1.5 rounded-xl border-ink-2 text-xs font-black bg-white shadow-book-sm">
+            札幌探索篇
+          </button>
+        </div>
+      </div>
+
+      <!-- 分區一：星野 TOMAMU 篇 -->
+      <div id="guide-sec-tomamu" class="guide-section block space-y-3.5">
+        <article class="bg-white border-ink rounded-3xl p-4 shadow-book space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="px-2 py-0.5 rounded-lg bg-book-coral text-white font-black text-[10px] border-ink-2">安藤忠雄建築經典</span>
+            <span class="text-xs text-book-gray font-bold">水の教会</span>
+          </div>
+          <h3 class="text-sm font-black text-book-ink">水之教堂 (Chapel on the Water)</h3>
+          
+          <p class="text-xs leading-relaxed text-book-ink/90 font-bold">
+            與風之教堂、光之教堂並列為建築大師安藤忠雄的「教堂三部曲」。以清水模混凝土、光線、大面滑動玻璃以及自然景致交織。冬季白雪完全覆蓋水面，黑色十字架聳立在純白天地之間，靜謐神聖。
+          </p>
+
+          <div class="bg-book-coralLight border-ink-2 rounded-2xl p-3 space-y-1.5">
+            <div class="text-xs font-black text-book-coral flex items-center gap-1">
+              <i class="fa-solid fa-user-tie"></i> 婚禮儀式賓客著裝守則 (Dress Code)
+            </div>
+            <ul class="text-[11px] font-bold text-book-ink space-y-1 list-disc list-inside">
+              <li><strong>男士：</strong>正式深色西裝（深藍、炭灰、黑色），搭配襯衫與領帶，<strong>請勿配戴領結</strong>，搭配正式包頭皮鞋。</li>
+              <li><strong>女士：</strong>優雅洋裝或正式套裝（米色、杏色、淺灰、霧藍等），<strong>請避免純白色</strong>（新娘主色），且遮蓋肩膀與膝蓋。</li>
+              <li><strong><i class="fa-solid fa-camera-slash text-book-coral mr-1"></i>攝影叮嚀：</strong>婚禮儀式進行中<strong>全體禁止拍照及錄影</strong>；儀式結束後的花瓣雨時段開放親友合影自由攝影。</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 星野設施 -->
+        <div class="bg-white border-ink rounded-3xl p-4 shadow-book space-y-3">
+          <h3 class="text-sm font-black text-book-ink flex items-center gap-1.5">
+            <i class="fa-solid fa-snowflake text-book-water"></i> 度假村設施亮點
+          </h3>
+          
+          <div class="grid grid-cols-1 gap-2 text-xs font-bold text-book-ink">
+            <div class="p-2.5 bg-book-waterLight rounded-2xl border-ink-2">
+              <div class="font-black text-book-water flex items-center justify-between">
+                <span>1. 霧冰平台 (Terrace of Frost)</span>
+                <span class="text-[10px] text-book-gray">海拔 1088m</span>
+              </div>
+              <p class="text-[11px] mt-1 text-book-ink/80">搭乘雲海纜車登頂，樹木披上霜雪的絕美冰晶奇觀，雲型步道「Cloud Walk」俯瞰十勝岳雄偉山景。</p>
+            </div>
+
+            <div class="p-2.5 bg-book-yellowLight rounded-2xl border-ink-2">
+              <div class="font-black text-book-yellow flex items-center justify-between">
+                <span>2. 微笑海灘 Mina-Mina Beach</span>
+                <span class="text-[10px] text-book-gray">30°C 恆溫</span>
+              </div>
+              <p class="text-[11px] mt-1 text-book-ink/80">全日本最大規模的室內造浪游泳池，大面玻璃帷幕，在零下冬雪世界穿著泳裝感受溫暖海浪。</p>
+            </div>
+
+            <div class="p-2.5 bg-book-bambooLight rounded-2xl border-ink-2">
+              <div class="font-black text-book-bamboo flex items-center justify-between">
+                <span>3. 木林之湯 (露天風呂)</span>
+                <span class="text-[10px] text-book-gray">雪景溫泉</span>
+              </div>
+              <p class="text-[11px] mt-1 text-book-ink/80">白天眺望銀白森林，夜晚在璀璨星空與雪原中泡湯，徹底放鬆身心。</p>
+            </div>
+
+            <div class="p-2.5 bg-book-card rounded-2xl border-ink-2">
+              <div class="font-black text-book-ink flex items-center justify-between">
+                <span>4. 森林餐廳 Nininupuri</span>
+                <span class="text-[10px] text-book-gray">350席 自助百匯</span>
+              </div>
+              <p class="text-[11px] mt-1 text-book-ink/80">百年雪松落地窗美景，四大切肉鐵板料理（牛肉、豬肉、羊肉）及豐富北海道在地海陸美饌。</p>
+            </div>
+          </div>
+
+          <div class="pt-1">
+            <div class="text-[11px] font-bold text-book-gray mb-1">星野度假村周邊地圖：</div>
+            <div class="w-full h-40 rounded-2xl border-ink-2 overflow-hidden">
+              <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="https://www.openstreetmap.org/export/embed.html?bbox=142.5950%2C43.0500%2C142.6450%2C43.0780&amp;layer=mapnik&amp;marker=43.0645%2C142.6247" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 分區二：小樽漫遊篇 (城市歷史背景 + 知名景點) -->
+      <div id="guide-sec-otaru" class="guide-section hidden space-y-3.5">
+        <article class="bg-white border-ink rounded-3xl p-4 shadow-book space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="px-2 py-0.5 rounded-lg bg-book-water text-white font-black text-[10px] border-ink-2">浪漫港都歷史</span>
+            <span class="text-xs text-book-gray font-bold">石造倉庫與海運樞紐</span>
+          </div>
+          <h3 class="text-sm font-black text-book-ink">小樽開拓背景：從北方華爾街到玻璃音樂之都</h3>
+          <p class="text-xs leading-relaxed text-book-ink/90 font-bold">
+            小樽在 19 世紀後半至 20 世紀初是北海道最大的海運港口與金融樞紐，各大銀行在此設立分行，曾被譽為「北方的華爾街」。為了讓駁船靠岸裝卸貨物，於 1923 年開鑿了小樽運河。隨著現代港灣設施興起，這座運河轉型為歷史文化重鎮，以保留完好的紅磚與軟石倉庫、煤油瓦斯燈路燈、吹製玻璃（硝子）與夢幻音樂盒聞名於世。
+          </p>
+
+          <!-- 鄰近規劃景點介紹 -->
+          <div class="space-y-2 pt-1 text-xs font-bold text-book-ink">
+            <div class="p-2.5 bg-book-card border-ink-2 rounded-2xl">
+              <div class="font-black text-book-coral flex items-center justify-between">
+                <span>小樽運河 & 淺草橋街園 (Asakusabashi)</span>
+                <span class="text-[10px] text-book-gray">經典取景點</span>
+              </div>
+              <p class="text-[11px] text-book-ink/80 mt-1">淺草橋是小樽最著名的明信片拍攝點，能將蜿蜒的運河弧線、63 盞煤氣燈與覆蓋白雪的歷史石造倉庫盡收眼底。</p>
+            </div>
+
+            <div class="p-2.5 bg-book-yellowLight border-ink-2 rounded-2xl">
+              <div class="font-black text-book-yellow flex items-center justify-between">
+                <span>童話十字路口 (メルヘン交差点) & 蒸氣鐘</span>
+                <span class="text-[10px] text-book-gray">地標集合點</span>
+              </div>
+              <p class="text-[11px] text-book-ink/80 mt-1">堺町通商店街的終點，周圍環繞常夜燈、小樽音樂盒堂本館與 LeTAO 本店。門口的加拿大製蒸氣鐘每 15 分鐘噴氣奏鳴五個音階，極具童話氣息。</p>
+            </div>
+
+            <div class="p-2.5 bg-book-waterLight border-ink-2 rounded-2xl">
+              <div class="font-black text-book-water flex items-center justify-between">
+                <span>北一硝子三號館 & 煤氣燈咖啡館</span>
+                <span class="text-[10px] text-book-gray">百年倉庫咖啡</span>
+              </div>
+              <p class="text-[11px] text-book-ink/80 mt-1">將舊木村倉庫改建為玻璃工藝殿堂。館內的「星巴特咖啡廳」完全不接電燈，全靠 167 盞每日手工點燃的煤油燈照亮空間，氣氛深邃浪漫。</p>
+            </div>
+
+            <div class="p-2.5 bg-book-bambooLight border-ink-2 rounded-2xl">
+              <div class="font-black text-book-bamboo flex items-center justify-between">
+                <span>水天宮神社 (步行可達名勝)</span>
+                <span class="text-[10px] text-book-gray">俯瞰港灣私房點</span>
+              </div>
+              <p class="text-[11px] text-book-ink/80 mt-1">位於堺町通旁的高台小丘上，建於 1859 年。爬上階梯可遠眺整個小樽港灣與結冰海面，是避開人潮欣賞小樽港都風光的絕佳秘境。</p>
+            </div>
+          </div>
+
+          <div class="pt-1">
+            <div class="text-[11px] font-bold text-book-gray mb-1">小樽運河與堺町通地圖：</div>
+            <div class="w-full h-40 rounded-2xl border-ink-2 overflow-hidden">
+              <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="https://www.openstreetmap.org/export/embed.html?bbox=140.9950%2C43.1930%2C141.0120%2C43.2030&amp;layer=mapnik&amp;marker=43.1995%2C141.0055" loading="lazy"></iframe>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 分區三：札幌探索篇 (城市開拓背景 + 住宿附近知名景點) -->
+      <div id="guide-sec-sapporo" class="guide-section hidden space-y-3.5">
+        <article class="bg-white border-ink rounded-3xl p-4 shadow-book space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="px-2 py-0.5 rounded-lg bg-book-yellow text-book-ink font-black text-[10px] border-ink-2">北國第一大都會</span>
+            <span class="text-xs text-book-gray font-bold">棋盤格綠洲城市</span>
+          </div>
+          <h3 class="text-sm font-black text-book-ink">札幌開拓歷史：棋盤格城市規劃與冬日慶典</h3>
+          <p class="text-xs leading-relaxed text-book-ink/90 font-bold">
+            札幌建城始於 1869 年北海道開拓使的設立，由島義勇等開拓官參考京都的條坊制規劃，設計出條理分明的「東西橫向、南北縱向」棋盤式街區，並以「大通公園」作為南北防火隔離綠帶。冬季的札幌更是雪景與現代摩登相融，地下街四通八達，無論戶外下多大雪，都能在暖和的地下連通道自由穿梭。
+          </p>
+
+          <!-- 鄰近住宿點的知名名勝介紹 -->
+          <div class="space-y-2 pt-1 text-xs font-bold text-book-ink">
+            <div class="p-2.5 bg-book-card border-ink-2 rounded-2xl">
+              <div class="font-black text-book-coral flex items-center justify-between">
+                <span>狸小路商店街 (Tanukikoji)</span>
+                <span class="text-[10px] text-book-gray">步行即達 (1-7丁目)</span>
+              </div>
+              <p class="text-[11px] text-book-ink/80 mt-1">北海道歷史最悠久的商店街之一，全長約 1 公里、擁有全天候挑高拱廊遮蔽。匯聚藥妝店（札幌藥妝、松本清）、唐吉訶德驚安殿堂、拉麵名店與伴手禮專賣店。</p>
+            </div>
+
+            <div class="p-2.5 bg-book-waterLight border-ink-2 rounded-2xl">
+              <div class="font-black text-book-water flex items-center justify-between">
+                <span>二條市場 (Nijo Market)</span>
+                <span class="text-[10px] text-book-gray">近 GRANBELL / JR Inn</span>
+              </div>
+              <p class="text-[11px] text-book-ink/80 mt-1">開拓初期由石狩濱漁民擺攤發展而成的傳統早市。清晨 7:00 開始販賣現剖生海膽、帝王蟹、鮭魚卵，是品嘗澎湃「海鮮丼」早餐的代表勝地。</p>
+            </div>
+
+            <div class="p-2.5 bg-book-yellowLight border-ink-2 rounded-2xl">
+              <div class="font-black text-book-yellow flex items-center justify-between">
+                <span>大通公園・電視塔 & 慕尼黑聖誕市集</span>
+                <span class="text-[10px] text-book-gray">冬季限定白之燈樹節</span>
+              </div>
+              <p class="text-[11px] text-book-ink/80 mt-1">札幌的心臟綠洲。12 月中旬適逢「白色燈樹節」與「慕尼黑聖誕市集」，2 丁目擺設德國傳統木屋販售熱紅酒與節慶甜食，登上電視塔俯瞰雪中燈海絕美無比。</p>
+            </div>
+
+            <div class="p-2.5 bg-book-bambooLight border-ink-2 rounded-2xl">
+              <div class="font-black text-book-bamboo flex items-center justify-between">
+                <span>北海道廳舊本廳舍 (紅磚廳舍) & 札幌時計台</span>
+                <span class="text-[10px] text-book-gray">近代開拓建築代表</span>
+              </div>
+              <p class="text-[11px] text-book-ink/80 mt-1">新巴洛克風格的美式紅磚官廳（國家重要文化財）與美式木造鐘樓。冬天積雪覆蓋紅磚與鐘塔屋頂，宛如走入歐洲童話街景。</p>
+            </div>
+          </div>
+
+          <div class="pt-1">
+            <div class="text-[11px] font-bold text-book-gray mb-1">札幌大通公園與周邊名勝地圖：</div>
+            <div class="w-full h-40 rounded-2xl border-ink-2 overflow-hidden">
+              <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="https://www.openstreetmap.org/export/embed.html?bbox=141.3450%2C43.0550%2C141.3650%2C43.0650&amp;layer=mapnik&amp;marker=43.0598%2C141.3550" loading="lazy"></iframe>
+            </div>
+          </div>
+        </article>
+      </div>
+
+    </div>
+
+    <!-- ==================== TAB 3: WALLET (記帳、匯率換算與分帳功能) ==================== -->
+    <div id="tab-wallet" class="tab-content hidden space-y-4">
+      
+      <!-- 1. 算式匯率計算機 -->
+      <div class="bg-book-card border-ink rounded-3xl p-4 shadow-book space-y-3">
+        <div class="flex items-center justify-between">
+          <h3 class="text-sm font-black text-book-ink flex items-center gap-1.5">
+            <i class="fa-solid fa-calculator text-book-coral"></i> 算式匯率換算器
+          </h3>
+          <div class="flex items-center gap-1 text-xs font-bold text-book-gray">
+            <span>自訂匯率:</span>
+            <input type="number" step="0.001" id="rate-val" value="0.215" onchange="updateCustomRate()" class="w-16 px-1.5 py-0.5 rounded-lg border-ink-2 bg-white text-center font-black text-book-ink text-xs focus:outline-none">
+          </div>
+        </div>
+
+        <div class="bg-white p-3 rounded-2xl border-ink-2 space-y-2">
+          <div class="flex items-center gap-2">
+            <input type="text" id="calc-input" placeholder="輸入算式 (例: 500+200*3)" class="flex-1 bg-transparent text-sm font-black text-book-ink focus:outline-none placeholder-book-gray/50">
+            <button onclick="calculateExpression()" class="px-3.5 py-1 bg-book-yellow border-ink-2 rounded-xl text-xs font-black shadow-book-sm btn-press">
+              ＝ 換算
+            </button>
+          </div>
+          <div class="pt-2 border-t-2 border-book-ink/10 flex justify-between items-baseline">
+            <span class="text-[11px] font-bold text-book-gray">折合台幣 (TWD)：</span>
+            <span class="text-base font-black text-book-coral" id="calc-result">NT$ 0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. 分帳成員名冊管理 -->
+      <div class="bg-white border-ink rounded-3xl p-4 shadow-book space-y-2.5">
+        <div class="flex items-center justify-between">
+          <h3 class="text-sm font-black text-book-ink flex items-center gap-1.5">
+            <i class="fa-solid fa-users text-book-water"></i> 家族分帳成員管理
+          </h3>
+          <span class="text-[10px] text-book-gray font-bold">預設家族乘員名單</span>
+        </div>
+
+        <div id="members-tags-container" class="flex flex-wrap gap-1.5">
+          <!-- JS 渲染成員標籤 -->
+        </div>
+
+        <div class="flex gap-2 pt-1">
+          <input type="text" id="new-member-name" placeholder="新增成員 (例: 長輩、小朋友)" class="flex-1 px-3 py-1.5 rounded-xl border-ink-2 bg-book-card text-xs font-bold text-book-ink focus:outline-none">
+          <button onclick="addNewMember()" class="px-3 py-1.5 bg-book-bamboo border-ink-2 rounded-xl text-xs font-black shadow-book-sm btn-press">
+            ＋ 加入成員
+          </button>
+        </div>
+      </div>
+
+      <!-- 3. 新增記帳表單 (代墊人與平分勾選) -->
+      <div class="bg-white border-ink rounded-3xl p-4 shadow-book space-y-3">
+        <div class="flex items-center justify-between border-b-2 border-book-ink/10 pb-2">
+          <h3 class="text-sm font-black text-book-ink flex items-center gap-1.5">
+            <i class="fa-solid fa-pen-to-square text-book-yellow"></i> 記帳開銷 (含分帳試算)
+          </h3>
+          <span class="text-[10px] font-bold text-book-coral bg-book-coralLight px-2 py-0.5 rounded-full border-ink-2">
+            LocalStorage 自動保存
+          </span>
+        </div>
+
+        <div class="space-y-2.5 text-xs font-bold">
+          <div>
+            <label class="block text-book-gray text-[11px] mb-1">消費品項名稱</label>
+            <input type="text" id="exp-title" placeholder="例: 小樽海鮮丼午餐、LeTAO 伴手禮、JR 票" class="w-full px-3 py-2 rounded-xl border-ink-2 bg-book-card text-xs font-bold text-book-ink focus:outline-none">
+          </div>
+
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-book-gray text-[11px] mb-1">日幣總金額 (¥)</label>
+              <input type="number" id="exp-amount" placeholder="0" oninput="handleTotalAmountChange()" class="w-full px-3 py-2 rounded-xl border-ink-2 bg-book-card text-xs font-black text-book-ink focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-book-gray text-[11px] mb-1">先付代墊人</label>
+              <select id="exp-payer" class="w-full px-2 py-2 rounded-xl border-ink-2 bg-book-card text-xs font-bold text-book-ink focus:outline-none">
+                <!-- 由 JS 動態生成選項 -->
+              </select>
+            </div>
+          </div>
+
+          <!-- 分帳模式切換 -->
+          <div class="bg-book-card p-2.5 rounded-2xl border-ink-2 space-y-2">
+            <div class="flex items-center justify-between">
+              <label class="text-book-ink text-xs font-black flex items-center gap-1">
+                <i class="fa-solid fa-scale-balanced text-book-coral"></i> 分攤方式
+              </label>
+              <div class="flex gap-1">
+                <button type="button" onclick="setSplitMode('equal')" id="btn-mode-equal" class="px-2.5 py-1 rounded-xl border-ink-2 text-[10px] font-black bg-book-yellow shadow-book-sm">
+                  均分模式
+                </button>
+                <button type="button" onclick="setSplitMode('custom')" id="btn-mode-custom" class="px-2.5 py-1 rounded-xl border-ink-2 text-[10px] font-black bg-white shadow-book-sm">
+                  指定金額模式
+                </button>
+              </div>
+            </div>
+
+            <!-- 均分模式選項 -->
+            <div id="equal-split-box" class="space-y-1.5">
+              <div class="flex justify-between items-center">
+                <span class="text-[10px] text-book-gray">勾選平分成員（自動每人平均分攤）：</span>
+                <button type="button" onclick="toggleSelectAllSplitters()" class="text-[10px] text-book-water underline font-black">全選 / 全消</button>
+              </div>
+              <div id="split-checkboxes-container" class="grid grid-cols-3 gap-1.5 bg-white p-2 rounded-xl border-ink-2">
+                <!-- JS 動態生成均分勾選 -->
+              </div>
+            </div>
+
+            <!-- 指定金額模式選項 -->
+            <div id="custom-split-box" class="hidden space-y-2">
+              <div class="flex justify-between items-center text-[10px] text-book-gray">
+                <span>勾選成員並輸入各自指定分攤金額：</span>
+                <button type="button" onclick="autoFillRemainingCustomAmount()" class="text-[10px] text-book-bamboo underline font-black">將餘額填入勾選者</button>
+              </div>
+              <div id="custom-split-inputs-container" class="space-y-1.5 max-h-48 overflow-y-auto pr-1">
+                <!-- JS 動態生成指定金額輸入列 -->
+              </div>
+
+              <!-- 差額警示與動態提示 -->
+              <div id="custom-split-diff-alert" class="p-2 rounded-xl border-ink-2 text-xs font-black bg-white text-book-ink flex items-center justify-between">
+                <span>分配狀況：</span>
+                <span id="custom-diff-status" class="text-book-coral">請輸入總金額</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Canvas 壓縮縮圖 -->
+          <div>
+            <label class="block text-book-gray text-[11px] mb-1">發票或收據相片 (自動 Canvas 壓縮)</label>
+            <div class="flex items-center gap-2">
+              <label for="exp-file" class="flex-1 cursor-pointer flex items-center justify-center gap-2 py-2 px-3 rounded-xl border-ink-2 border-dashed bg-book-card text-xs font-bold text-book-ink hover:bg-book-yellowLight">
+                <i class="fa-solid fa-camera text-book-coral"></i>
+                <span id="photo-status-text">拍照 / 選擇收據</span>
+              </label>
+              <input type="file" id="exp-file" accept="image/*" class="hidden" onchange="handleReceiptPhoto(event)">
+              
+              <div id="preview-box" class="hidden relative w-10 h-10 rounded-xl border-ink-2 overflow-hidden flex-shrink-0">
+                <img id="preview-img" src="" class="w-full h-full object-cover">
+                <button onclick="clearSelectedPhoto()" class="absolute inset-0 bg-black/40 text-white flex items-center justify-center text-xs">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="saveExpenseRecord()" class="w-full py-2.5 bg-book-coral border-ink-2 rounded-2xl text-white font-black text-xs shadow-book-sm btn-press flex items-center justify-center gap-1">
+            <i class="fa-solid fa-plus"></i> 儲存此筆支出並重新結算
+          </button>
+        </div>
+      </div>
+
+      <!-- 4. 結算與還款建議 -->
+      <div class="bg-book-card border-ink rounded-3xl p-4 shadow-book space-y-3">
+        <div class="flex items-center justify-between">
+          <h3 class="text-sm font-black text-book-ink flex items-center gap-1.5">
+            <i class="fa-solid fa-hand-holding-dollar text-book-bamboo"></i> 分帳結算與還款清單
+          </h3>
+          <button onclick="recalculateSettlement()" class="text-[10px] text-book-gray underline">重新整理</button>
+        </div>
+
+        <div id="settlement-summary-container" class="space-y-1.5">
+          <!-- JS 注入個人淨額 -->
+        </div>
+
+        <div class="pt-2 border-t-2 border-book-ink/10">
+          <div class="text-[11px] font-black text-book-coral mb-1.5"><i class="fa-solid fa-arrow-right-arrow-left mr-1"></i>最優還款建議（誰給誰多少錢）：</div>
+          <div id="debt-transfer-container" class="space-y-1 text-xs font-bold text-book-ink">
+            <!-- JS 注入轉帳建議 -->
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. 記帳列表 -->
+      <div class="space-y-2">
+        <div class="flex items-center justify-between px-1">
+          <h4 class="text-xs font-black text-book-ink">記帳歷史明細</h4>
+          <button onclick="clearAllExpensesPrompt()" class="text-[10px] text-book-coral underline font-bold">清空記帳</button>
+        </div>
+        <div id="expense-records-container" class="space-y-2.5">
+          <!-- JS 渲染支出卡片 -->
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==================== TAB 4: LISTS (可打勾待辦清單與備忘錄) ==================== -->
+    <div id="tab-lists" class="tab-content hidden space-y-4">
+      
+      <!-- 行前準備 CheckList -->
+      <div class="bg-white border-ink rounded-3xl p-4 shadow-book space-y-3">
+        <div class="flex items-center justify-between">
+          <div>
+            <span class="text-[10px] font-bold text-book-coral block">PACKING CHECKLIST</span>
+            <h3 class="text-sm font-black text-book-ink">行前準備與行李 CheckList</h3>
+          </div>
+          <button onclick="resetPackingState()" class="text-[10px] text-book-gray underline font-bold">全部重設</button>
+        </div>
+
+        <div class="space-y-1">
+          <div class="flex justify-between text-xs font-black text-book-ink">
+            <span>打包完成率</span>
+            <span id="pack-percent" class="text-book-coral">0%</span>
+          </div>
+          <div class="w-full bg-book-card border-ink-2 h-3 rounded-full overflow-hidden p-0.5">
+            <div id="pack-bar" class="h-full bg-book-bamboo rounded-full transition-all duration-300" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <div id="packing-groups-container" class="space-y-3 pt-1">
+          <!-- JS 動態生成 Checkbox -->
+        </div>
+      </div>
+
+      <!-- 個人備忘錄 (自動轉換可點擊 URL 按鈕) -->
+      <div class="bg-white border-ink rounded-3xl p-4 shadow-book space-y-3">
+        <div class="flex items-center justify-between">
+          <h3 class="text-sm font-black text-book-ink flex items-center gap-1.5">
+            <i class="fa-regular fa-clipboard text-book-water"></i> 個人隨身備忘錄
+          </h3>
+          <span class="text-[10px] text-book-gray font-bold">網址自動轉為外顯按鈕</span>
+        </div>
+
+        <div class="space-y-2">
+          <textarea id="memo-textarea" rows="3" placeholder="隨手記錄重要資訊或網址：&#10;例：飯店訂單號碼、遊船預約 https://otaru.cc" class="w-full p-2.5 rounded-2xl border-ink-2 bg-book-card text-xs font-bold text-book-ink focus:outline-none resize-none"></textarea>
+          <button onclick="saveNewMemo()" class="w-full py-2 bg-book-yellow border-ink-2 rounded-xl text-xs font-black shadow-book-sm btn-press">
+            儲存備忘筆記
+          </button>
+        </div>
+
+        <div id="memos-list-container" class="space-y-2 pt-1">
+          <!-- JS 渲染備忘項目 -->
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==================== TAB 5: INFO (實用資訊、日本新退稅制度與緊急求助) ==================== -->
+    <div id="tab-info" class="tab-content hidden space-y-4">
+      
+      <!-- 日本新退稅制度深度說明卡片 (出境退稅新制) -->
+      <div class="bg-book-card border-ink rounded-3xl p-4 shadow-book space-y-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-1.5">
+            <span class="w-6 h-6 rounded-full bg-book-coral text-white flex items-center justify-center text-xs font-black">新</span>
+            <h3 class="text-sm font-black text-book-ink">日本出境「先含稅後退稅」新制指南</h3>
+          </div>
+          <span class="text-[10px] bg-book-yellow px-2 py-0.5 rounded-lg border-ink-2 font-black">必看購物規範</span>
+        </div>
+
+        <p class="text-xs font-bold text-book-ink/90 leading-relaxed">
+          日本政府針對外國旅客推動全新免稅制度，徹底防範境內轉售漏稅問題。主要變革為：在市區店家<strong>一律先以「含稅價」結帳</strong>，待離開日本時於<strong>機場海關確認商品帶出境後，才進行退稅</strong>。
+        </p>
+
+        <!-- 4大核心規定 -->
+        <div class="space-y-2 text-xs font-bold text-book-ink">
+          <div class="p-2.5 bg-white rounded-2xl border-ink-2 space-y-1">
+            <div class="text-book-coral font-black flex items-center gap-1">
+              <i class="fa-solid fa-receipt"></i> 1. 市區購買流程
+            </div>
+            <p class="text-[11px] text-book-gray">
+              結帳時出示護照或 Visit Japan Web 免稅 QR Code，以「含稅金額」刷卡或付現。請妥善保存每張實體紙本收據明細，購買紀錄會即時連線海關伺服器。
+            </p>
+          </div>
+
+          <div class="p-2.5 bg-white rounded-2xl border-ink-2 space-y-1">
+            <div class="text-book-water font-black flex items-center gap-1">
+              <i class="fa-solid fa-box-open"></i> 2. 消耗品特殊封裝不可在日拆封
+            </div>
+            <p class="text-[11px] text-book-gray">
+              藥妝、食品、保養品等「消耗品」會裝入專用免稅密封袋。在離開日本境內前<strong>絕對不可拆封撕毀</strong>，海關查驗若已開封將視同在日本境內已使用，直接補徵 10% 消費稅！
+            </p>
+          </div>
+
+          <div class="p-2.5 bg-white rounded-2xl border-ink-2 space-y-1">
+            <div class="text-book-yellow font-black flex items-center gap-1">
+              <i class="fa-solid fa-plane-circle-check"></i> 3. 機場出境退稅手續
+            </div>
+            <p class="text-[11px] text-book-gray">
+              在新千歲機場或各大國際機場出境時，於海關電子查驗機台掃描護照及登機證。系統核對購買紀錄並經海關抽查確認免稅品齊全後，退稅款將退回原信用卡、行動支付或現場領取日幣現金。
+            </p>
+          </div>
+
+          <div class="p-2.5 bg-white rounded-2xl border-ink-2 space-y-1">
+            <div class="text-book-bamboo font-black flex items-center gap-1">
+              <i class="fa-solid fa-suitcase-rolling"></i> 4. 託運行李免稅品注意流程
+            </div>
+            <p class="text-[11px] text-book-gray">
+              若免稅品（如液體保養品、酒類、大件衣物）需要放入行李箱託運：前往航空公司報到時，請先告知地勤「行李箱內含有託運免稅商品」，請地勤秤重掛牌後勿立刻送進行李輸送帶，由海關人員在查驗櫃檯蓋章確認後方可託運。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 天氣即時查詢卡片 -->
+      <div class="bg-white border-ink rounded-3xl p-4 shadow-book space-y-2.5">
+        <h3 class="text-sm font-black text-book-ink flex items-center gap-1.5">
+          <i class="fa-solid fa-cloud-snowflake text-book-water"></i> 即時天氣與降雪預報
+        </h3>
+        <p class="text-xs font-bold text-book-gray">12 月北海道戶外氣溫約 -8°C ~ 2°C，室內外溫差大，出門前請點擊查詢：</p>
+        
+        <div class="grid grid-cols-2 gap-2 pt-1">
+          <a href="https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=016000" target="_blank" class="p-2.5 bg-book-card border-ink-2 rounded-2xl text-center btn-press">
+            <div class="text-xs font-black text-book-ink">日本氣象廳 (JMA)</div>
+            <div class="text-[10px] text-book-gray mt-0.5">石狩・空知・後志</div>
+          </a>
+          <a href="https://tenki.jp/forecast/1/2/" target="_blank" class="p-2.5 bg-book-card border-ink-2 rounded-2xl text-center btn-press">
+            <div class="text-xs font-black text-book-ink">Tenki.jp 天氣網</div>
+            <div class="text-[10px] text-book-gray mt-0.5">北海道即時積雪狀況</div>
+          </a>
+          <a href="https://www.snowtomamu.jp/winter/zh/" target="_blank" class="col-span-2 p-2.5 bg-book-waterLight border-ink-2 rounded-2xl flex items-center justify-between btn-press">
+            <div class="text-xs font-black text-book-ink">
+              <i class="fa-solid fa-mountain mr-1 text-book-water"></i> 星野渡假村即時雪況 & 纜車運營狀態
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-book-ink"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- 緊急聯絡通訊錄 -->
+      <div class="bg-book-card border-ink rounded-3xl p-4 shadow-book space-y-2.5">
+        <h3 class="text-sm font-black text-book-ink flex items-center gap-1.5">
+          <i class="fa-solid fa-phone-volume text-book-coral"></i> 緊急聯絡通訊錄 (點擊即撥)
+        </h3>
+        
+        <div class="space-y-2 text-xs font-black">
+          <a href="tel:110" class="flex items-center justify-between p-2.5 bg-white border-ink-2 rounded-2xl btn-press">
+            <div class="flex items-center gap-2">
+              <span class="w-7 h-7 rounded-full bg-book-coral text-white flex items-center justify-center text-xs">110</span>
+              <div>
+                <div>報警專線 (警察局)</div>
+                <div class="text-[10px] text-book-gray font-normal">交通事故、重大事故報案</div>
+              </div>
+            </div>
+            <i class="fa-solid fa-phone text-book-coral"></i>
+          </a>
+
+          <a href="tel:119" class="flex items-center justify-between p-2.5 bg-white border-ink-2 rounded-2xl btn-press">
+            <div class="flex items-center gap-2">
+              <span class="w-7 h-7 rounded-full bg-book-yellow text-book-ink flex items-center justify-center text-xs">119</span>
+              <div>
+                <div>救護車 & 消防隊</div>
+                <div class="text-[10px] text-book-gray font-normal">突發急病醫療、火災救援</div>
+              </div>
+            </div>
+            <i class="fa-solid fa-phone text-book-yellow"></i>
+          </a>
+
+          <div class="p-2.5 bg-white border-ink-2 rounded-2xl space-y-1.5">
+            <div>
+              <div class="text-xs font-black">台北駐日經濟文化代表處 (札幌分處)</div>
+              <div class="text-[10px] text-book-gray font-normal">護照遺失補發、台灣海外急難救助</div>
+            </div>
+            <div class="grid grid-cols-2 gap-2 pt-1">
+              <a href="tel:+81112222681" class="py-1 px-2 bg-book-card border-ink-2 rounded-xl text-[11px] text-center btn-press">
+                代表處總機
+              </a>
+              <a href="tel:+818014602568" class="py-1 px-2 bg-book-coralLight border-ink-2 rounded-xl text-[11px] text-book-coral text-center btn-press font-black">
+                24H 緊急急難電話
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 出入境與雪地行走叮嚀 -->
+      <div class="bg-white border-ink rounded-3xl p-4 shadow-book space-y-2.5 text-xs font-bold text-book-ink">
+        <h3 class="text-sm font-black flex items-center gap-1.5">
+          <i class="fa-solid fa-shield-cat text-book-bamboo"></i> 雪國行走防滑與違禁品提示
+        </h3>
+
+        <div class="space-y-2 text-[11px] leading-relaxed">
+          <div class="p-2.5 bg-book-coralLight border-ink-2 rounded-2xl">
+            <span class="text-book-coral font-black">❌ 嚴格禁帶肉製品與生鮮水果：</span>
+            包含含肉泡麵、真空肉乾、香腸均不可帶入日本，亦不可攜帶回台，查獲直接重罰 20 萬日圓起！
+          </div>
+
+          <div class="p-2.5 bg-book-yellowLight border-ink-2 rounded-2xl">
+            <span class="text-book-ink font-black">🐧 企鵝步伐雪地防滑法：</span>
+            戶外黑冰特別滑，請保持小步幅、雙腳底板全平面貼地慢踩，雙手勿插口袋以保持平衡。
+          </div>
+
+          <div class="p-2.5 bg-book-waterLight border-ink-2 rounded-2xl">
+            <span class="text-book-water font-black">🧅 洋蔥/玉米式穿搭：</span>
+            日本室內與車上暖氣極強 (約 22°C~25°C)。建議發熱衣 + 易穿脫中層 + 防風防水保暖長外套，方便進出隨時穿脫。
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ==================== FIXED BOTTOM NAVIGATION (底部固定選單) ==================== -->
+  <nav class="fixed bottom-0 left-0 right-0 z-50 bg-[#FFFCF6] border-t-ink shadow-[0_-3px_0px_#3E3A39] pb-safe">
+    <div class="max-w-md mx-auto px-3 py-2 flex items-center justify-between gap-1">
+      <button onclick="switchTab('plan')" id="btn-tab-plan" class="tab-nav-btn flex-1 py-1.5 rounded-2xl border-ink-2 font-black transition text-center bg-book-yellow shadow-book-sm flex flex-col items-center">
+        <i class="fa-solid fa-calendar-day text-sm"></i>
+        <span class="text-[10px] mt-0.5">行程</span>
+      </button>
+      <button onclick="switchTab('guide')" id="btn-tab-guide" class="tab-nav-btn flex-1 py-1.5 rounded-2xl border-ink-2 font-black transition text-center bg-white shadow-book-sm flex flex-col items-center">
+        <i class="fa-solid fa-book-open text-sm"></i>
+        <span class="text-[10px] mt-0.5">導覽</span>
+      </button>
+      <button onclick="switchTab('wallet')" id="btn-tab-wallet" class="tab-nav-btn flex-1 py-1.5 rounded-2xl border-ink-2 font-black transition text-center bg-white shadow-book-sm flex flex-col items-center">
+        <i class="fa-solid fa-calculator text-sm"></i>
+        <span class="text-[10px] mt-0.5">記帳分帳</span>
+      </button>
+      <button onclick="switchTab('lists')" id="btn-tab-lists" class="tab-nav-btn flex-1 py-1.5 rounded-2xl border-ink-2 font-black transition text-center bg-white shadow-book-sm flex flex-col items-center">
+        <i class="fa-solid fa-list-check text-sm"></i>
+        <span class="text-[10px] mt-0.5">清單</span>
+      </button>
+      <button onclick="switchTab('info')" id="btn-tab-info" class="tab-nav-btn flex-1 py-1.5 rounded-2xl border-ink-2 font-black transition text-center bg-white shadow-book-sm flex flex-col items-center">
+        <i class="fa-solid fa-circle-info text-sm"></i>
+        <span class="text-[10px] mt-0.5">資訊</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== PHOTO MODAL (相片燈箱) ==================== -->
+  <div id="photo-modal" class="fixed inset-0 z-50 bg-black/70 hidden items-center justify-center p-4" onclick="closePhotoModal()">
+    <div class="max-w-sm w-full bg-book-bg border-ink rounded-3xl p-3 shadow-book-lg" onclick="event.stopPropagation()">
+      <div class="flex justify-between items-center mb-2 px-1">
+        <h4 id="photo-modal-caption" class="text-xs font-black text-book-ink">收據相片</h4>
+        <button onclick="closePhotoModal()" class="w-6 h-6 rounded-full bg-white border-ink-2 flex items-center justify-center text-xs">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="rounded-2xl border-ink-2 overflow-hidden bg-white max-h-[65vh] flex items-center justify-center">
+        <img id="photo-modal-img" src="" class="w-full h-auto object-contain">
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TOAST 提示訊息 ==================== -->
+  <div id="cute-toast" class="fixed top-14 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-2xl bg-book-ink text-white text-xs font-black shadow-book transition-all duration-300 opacity-0 pointer-events-none transform -translate-y-2">
+    提示訊息
+  </div>
+
+  <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+  <script>
+    /* =========================================================
+       1. DATA: 每日時間軸行程 (含明確分類圖示、景點營業時間與退稅說明)
+       ========================================================= */
+    // 分類圖示設定對照表
+    const CATEGORY_MAP = {
+      transport: { name: '交通', icon: 'fa-solid fa-bus-simple', color: 'bg-book-water', textColor: 'text-book-ink' },
+      activity: { name: '活動/儀式', icon: 'fa-solid fa-heart', color: 'bg-book-coral', textColor: 'text-white' },
+      spot: { name: '景點', icon: 'fa-solid fa-landmark', color: 'bg-book-yellow', textColor: 'text-book-ink' },
+      food: { name: '美食', icon: 'fa-solid fa-utensils', color: 'bg-book-bamboo', textColor: 'text-book-ink' },
+      hotel: { name: '住宿', icon: 'fa-solid fa-bed', color: 'bg-book-card', textColor: 'text-book-ink' },
+      shopping: { name: '購物', icon: 'fa-solid fa-bag-shopping', color: 'bg-book-coralLight', textColor: 'text-book-coral' }
+    };
+
+    const dailyItinerary = {
+      1: {
+        date: "12/11 (五)",
+        title: "新千歲機場集結・專車前往星野 TOMAMU",
+        trans: "接駁巴士 (約 2.5 hr)",
+        items: [
+          {
+            time: "13:15 集合 / 13:30 發車",
+            category: "transport",
+            important: true,
+            isMust: false,
+            title: "第一班接駁巴士集合出發",
+            tag: "專車接送",
+            desc: "集合點：新千歲機場 國際線 2F 到達口 Information 資訊中心櫃檯。<br>負責人：Albee 婷羽。車程約 2.5 小時，車內請勿飲食，請先在機場簡單用餐。",
+            mapQuery: "新千歲機場 國際線 到達口"
+          },
+          {
+            time: "15:00 集合 / 15:30 發車",
+            category: "transport",
+            important: true,
+            isMust: false,
+            title: "第二班接駁巴士集合出發",
+            tag: "專車接送",
+            desc: "集合點：新千歲機場 國際線 2F 到達口 Information 資訊中心櫃檯。<br>負責人：鮑伯 (日文溝通：杰錕)。車程約 2.5 小時。車內請勿飲食，請先在機場簡單用餐。",
+            mapQuery: "新千歲機場 國際線 到達口"
+          },
+          {
+            time: "16:00 - 18:00",
+            category: "hotel",
+            important: false,
+            isMust: false,
+            title: "抵達飯店・車上領房卡辦理入住",
+            tag: "飯店入住",
+            desc: "專車抵達星野 THE TOWER 後先在車上等候，飯店人員將上車協助辦理 Check-in 並發放房間鑰匙及早餐券，再依序領取大件行李。",
+            mapQuery: "星野リゾート トマム ザ・タワー"
+          },
+          {
+            time: "18:30 後",
+            category: "food",
+            important: false,
+            isMust: false,
+            title: "度假村初探索與自費用餐",
+            tag: "休閒漫步",
+            desc: "可搭乘園區巡迴巴士至 Hotalu Street 螢火蟲街品嘗拉麵、甜點或丼飯；亦可漫步雪地欣賞銀白世界夜景。",
+            mapQuery: "Hotalu Street Tomamu"
+          }
+        ]
+      },
+      2: {
+        date: "12/12 (六)",
+        title: "婚禮盛典日・水之教堂神聖見證",
+        trans: "園區步道 / 接駁車",
+        items: [
+          {
+            time: "09:00",
+            category: "activity",
+            important: true,
+            isMust: true,
+            title: "【秀川 & 鈺婷】婚禮親友集合",
+            tag: "重要集結",
+            desc: "集合地點：水之教堂櫃檯 (hal 餐廳 2 樓)。親友到齊後由工作人員帶領前往教堂。<br><span class='text-book-coral font-black'>※婚禮儀式進行中嚴格禁止拍照及錄影</span>",
+            mapQuery: "星野リゾート 水の教会"
+          },
+          {
+            time: "10:00 - 10:45",
+            category: "activity",
+            important: true,
+            isMust: true,
+            title: "秀川 & 鈺婷 婚禮儀式與花瓣雨攝影",
+            tag: "水之教堂儀式",
+            desc: "10:00 神聖儀式開始；10:20 花瓣雨開放親友自由拍攝合影留念；10:45 新人返回休息室。",
+            mapQuery: "Chapel on the water Tomamu"
+          },
+          {
+            time: "12:00 - 15:00",
+            category: "spot",
+            important: false,
+            isMust: false,
+            title: "午間自由探索・霧冰平台 / 微笑海灘",
+            tag: "園區設施",
+            desc: "可搭乘纜車登上海拔 1,088 公尺的霧冰平台眺望十勝雪山，或至 30°C 恆溫的微笑海灘 (Mina-Mina Beach) 享受室內溫暖波浪。",
+            mapQuery: "Mina-Mina Beach Tomamu"
+          },
+          {
+            time: "15:30",
+            category: "activity",
+            important: true,
+            isMust: true,
+            title: "【志宏 & 佳玲】婚禮親友集合",
+            tag: "重要集結",
+            desc: "集合地點：水之教堂櫃檯 (hal 餐廳 2 樓)。男士請著深色正式西裝領帶、女士請著優雅洋裝或套裝。<br><span class='text-book-coral font-black'>※婚禮儀式進行中嚴格禁止拍照及錄影</span>",
+            mapQuery: "星野リゾート 水の教会"
+          },
+          {
+            time: "16:30 - 17:15",
+            category: "activity",
+            important: true,
+            isMust: true,
+            title: "志宏 & 佳玲 婚禮儀式與花瓣雨攝影",
+            tag: "水之教堂儀式",
+            desc: "16:30 婚禮儀式；16:50 浪漫花瓣雨與自由合影時間；17:15 新人返回休息室。",
+            mapQuery: "Chapel on the water Tomamu"
+          },
+          {
+            time: "18:00 / 18:30",
+            category: "food",
+            important: true,
+            isMust: true,
+            title: "全體親友聚餐・森林餐廳 Nininupuri",
+            tag: "婚禮晚宴",
+            desc: "18:00 親友排隊入場、自由入座用餐；18:30 雙方親家家屬入座包廂。共享北海道名物牛羊豬肉與海陸豐盛百匯料理！",
+            mapQuery: "森のレストラン ニニヌプリ"
+          }
+        ]
+      },
+      3: {
+        date: "12/13 (日)",
+        title: "告別星野・包車前往札幌市區",
+        trans: "包車專車 (約 2.5 hr)",
+        items: [
+          {
+            time: "11:00 前",
+            category: "hotel",
+            important: true,
+            isMust: false,
+            title: "完成退房手續 (Check-out)",
+            tag: "飯店退房",
+            desc: "辦理退房並將行李寄放於大廳。退房後當天仍可繼續自由使用度假村各項設施。",
+            mapQuery: "星野リゾート トマム ザ・タワー"
+          },
+          {
+            time: "11:30 - 16:00",
+            category: "spot",
+            important: false,
+            isMust: false,
+            title: "TOMAMU 自由活動・露天風呂與年輪蛋糕體驗",
+            tag: "自由探索",
+            desc: "可預約手作年輪蛋糕、到木林之湯泡露天風呂，或在雪地漫步拍照留念。",
+            mapQuery: "Tomamu The Tower"
+          },
+          {
+            time: "16:30 集合 / 17:00 發車",
+            category: "transport",
+            important: true,
+            isMust: true,
+            title: "親友包車集合・出發前往札幌",
+            tag: "45人座大巴",
+            desc: "16:30 於 THE TOWER 大廳集合裝運行李，17:00 準時發車前往札幌。<br>停靠站：SAPPORO HOTEL by GRANBELL ➔ JR Inn 札幌站南口 ➔ 終點札幌車站。",
+            mapQuery: "SAPPORO HOTEL by GRANBELL"
+          },
+          {
+            time: "19:30 - 21:00",
+            category: "food",
+            important: false,
+            isMust: false,
+            title: "抵達飯店入住・狸小路拉麵與宵夜",
+            tag: "市區美食",
+            desc: "辦理入住後，可步行至狸小路商店街或薄野享用札幌道地味噌拉麵、湯咖哩或成吉思汗烤羊肉。",
+            mapQuery: "狸小路商店街"
+          }
+        ]
+      },
+      4: {
+        date: "12/14 (一)",
+        title: "小樽百年運河・堺町通甜點硝子深度散策",
+        trans: "JR 快速 Airport 號 (約 35分) + 全日漫步",
+        items: [
+          {
+            time: "09:00 - 09:45",
+            category: "transport",
+            important: false,
+            isMust: false,
+            title: "搭乘 JR 快速前往小樽",
+            tag: "JR 電車",
+            desc: "自 JR 札幌站搭乘快速 Airport 號前往小樽，沿途右側車窗可欣賞石狩灣雪海壯闊景色。",
+            mapQuery: "小樽車站"
+          },
+          {
+            time: "10:00 - 10:45",
+            category: "spot",
+            important: false,
+            isMust: true,
+            title: "小樽運河遊船 (Otaru Canal Cruise)",
+            tag: "必去景點",
+            desc: "<strong>營業時間：10:00 - 16:00 (夜航至 20:00)</strong><br>可選擇搭乘復古遊船穿梭中央橋至小樽港，從水面仰望石造倉庫與冬日雪景的絕佳視角。",
+            mapQuery: "小樽運河遊船"
+          },
+          {
+            time: "11:00 - 11:45",
+            category: "spot",
+            important: false,
+            isMust: false,
+            title: "小樽藝術村・花窗玻璃美術館",
+            tag: "文藝名勝",
+            desc: "<strong>營業時間：10:00 - 17:00 (週三公休)</strong><br>利用舊高橋倉庫改建，展示 19 世紀末至 20 世紀初英國教會精湛彩繪玻璃藝術。",
+            mapQuery: "小樽藝術村 花窗玻璃美術館"
+          },
+          {
+            time: "12:00 - 13:15",
+            category: "food",
+            important: false,
+            isMust: false,
+            title: "午餐時光・小樽海鮮丼美饌 (參考推薦)",
+            tag: "美食推薦",
+            desc: "自由品嘗小樽極上海鮮！<br>推薦店家參考：<br>① <strong>ポセイ丼 丼兵衛小樽運河店</strong> (近運河、食材豐富)<br>② <strong>ヤマジョウ安田商店</strong> (在地海產行直送、新鮮平價)<br>③ <strong>小樽海鮮丼 吉</strong> (人氣海膽與鮭魚卵丼飯)。",
+            mapQuery: "ポセイ丼 丼兵衛"
+          },
+          {
+            time: "午後自由活動 (時間不限)",
+            category: "spot",
+            important: false,
+            isMust: false,
+            title: "小樽出拔小路",
+            tag: "美食商場",
+            desc: "<strong>營業時間：11:00 - 21:00 (依各店家為準)</strong><br>重現大正與昭和風情的美食小巷，擁有地標「火警望樓」，可免費登頂俯瞰小樽運河與十字路口雪景。",
+            mapQuery: "小樽出拔小路"
+          },
+          {
+            time: "(時間不限)",
+            category: "spot",
+            important: false,
+            isMust: false,
+            title: "堺町通商店街散策",
+            tag: "歷史街道",
+            desc: "<strong>店家營業時間：約 09:00 - 18:00</strong><br>兩旁林立保留完好的百年石造洋館與倉庫，匯集各大玻璃工藝館、伴手禮店與特色咖啡館，漫步氣氛極佳。",
+            mapQuery: "堺町通り商店街"
+          },
+          {
+            time: " (時間不限)",
+            category: "shopping",
+            important: false,
+            isMust: false,
+            title: "ちいかわ もぐもぐ本舗 小樽店",
+            tag: "人氣萌店",
+            desc: "<strong>營業時間：09:30 - 17:30</strong><br>吉伊卡哇粉絲必訪！以復古懷舊點心雜貨為主題，販售小樽限定吊飾、點心盒與限定周邊雜貨。",
+            mapQuery: "ちいかわもぐもぐ本舗小樽店"
+          },
+          {
+            time: " (時間不限)",
+            category: "food",
+            important: false,
+            isMust: false,
+            title: "LeTAO 小樽總店 (ルタオ本店)",
+            tag: "名產甜點",
+            desc: "<strong>營業時間：09:00 - 18:00 (咖啡廳 L.O. 17:30)</strong><br>品嘗最經典的原味雙層乳酪蛋糕 (Double Fromage) 與限定紅茶，頂樓展望台更可俯瞰童話十字路口。",
+            mapQuery: "LeTAO 小樽總店"
+          },
+          {
+            time: " (時間不限)",
+            category: "food",
+            important: false,
+            isMust: false,
+            title: "銀之鐘 1 號館 (銀の鐘1号館)",
+            tag: "紀念咖啡",
+            desc: "<strong>營業時間：10:00 - 17:30</strong><br>經典特色：點選咖啡冷飲即贈送精巧陶瓷咖啡杯，喝完清洗後可帶回家當紀念品！",
+            mapQuery: "銀之鐘1號館"
+          },
+          {
+            time: "(時間不限)",
+            category: "spot",
+            important: false,
+            isMust: false,
+            title: "小樽音樂盒堂 本館 (小樽オルゴール堂)",
+            tag: "夢幻地標",
+            desc: "<strong>營業時間：09:00 - 18:00</strong><br>門口有加拿大製蒸氣鐘，每 15 分鐘噴氣奏樂。挑高紅磚洋館內收藏超過 25,000 件精緻音樂盒。",
+            mapQuery: "小樽音樂盒堂 本館"
+          },
+          {
+            time: "16:30 集合",
+            category: "activity",
+            important: true,
+            isMust: true,
+            title: "【重要集合】長輩親友集合處：小樽音樂盒堂本館",
+            tag: "長輩集合點",
+            desc: "<strong>集合時間：16:30 ｜ 地點：小樽音樂盒堂本館門口 (蒸氣鐘前)</strong><br>長輩們可在室內溫暖處等待或在門口集合，準備一同前往搭車返回札幌。",
+            mapQuery: "小樽音樂盒堂 本館"
+          },
+          {
+            time: "18:30 - 20:30",
+            category: "spot",
+            important: false,
+            isMust: false,
+            title: "返回札幌・大通公園慕尼黑聖誕市集",
+            tag: "節慶活動",
+            desc: "在大通公園 2 丁目漫步，欣賞白色燈樹節，逛德國傳統木屋手工藝品、品嘗熱紅酒與德國香腸，同時享用晚餐。",
+            mapQuery: "大通公園 聖誕市集"
+          }
+        ]
+      },
+      5: {
+        date: "12/15 (二)",
+        title: "札幌國際滑雪 / 市區百貨採購自由日",
+        trans: "地鐵 / 滑雪直達巴士",
+        items: [
+          {
+            time: "09:00",
+            category: "transport",
+            important: true,
+            isMust: false,
+            title: "長輩組退房前往機場返台",
+            desc: "長輩依班機時間搭乘 JR 前往新千歲機場辦理登機手續，平安返台。",
+            tag: "返台離境",
+            mapQuery: "新千歲機場 國際線"
+          },
+          {
+            time: "10:00 - 16:30",
+            category: "activity",
+            important: false,
+            isMust: false,
+            title: "A路線：札幌國際滑雪場 ｜ B路線：市區採購",
+            tag: "分組自由行",
+            desc: "滑雪組搭直達巴士前往札幌國際體驗優質粉雪；購物組可攻佔大丸百貨、Bic Camera、Parco、狸小路藥妝。",
+            mapQuery: "札幌國際滑雪場"
+          },
+          {
+            time: "19:00 - 22:00",
+            category: "activity",
+            important: false,
+            isMust: false,
+            title: "聚會唱歌：Jankara KTV 札幌駅前店 (參考行程 / 自由參加)",
+            tag: "參考行程",
+            desc: "<strong>自由參加行程</strong>。包廂熱唱日語與中文金曲，慶祝家族旅行圓滿！",
+            mapQuery: "ジャンカラ 札幌駅前店"
+          }
+        ]
+      },
+      6: {
+        date: "12/16 (三)",
+        title: "滿載回憶返台・日本新版出境退稅流程",
+        trans: "JR 快速 Airport 號",
+        items: [
+          {
+            time: "10:00 前",
+            category: "hotel",
+            important: true,
+            isMust: false,
+            title: "飯店辦理 Check-out 退房",
+            tag: "飯店退房",
+            desc: "收齊戰利品與大件行李，步行至 JR 札幌站搭車前往新千歲機場 (車程約 37 分鐘)。",
+            mapQuery: "JR 札幌車站"
+          },
+          {
+            time: "11:30 - 14:00",
+            category: "shopping",
+            important: false,
+            isMust: true,
+            title: "新千歲機場 國內線二樓伴手禮大街",
+            tag: "必逛商場",
+            desc: "號稱全日本最好買的機場！美瑛放牧酪農場奶油三明治、KINOTOYA 冰淇淋、六花亭、北菓樓開拓泡芙一次購足。",
+            mapQuery: "新千歲機場 國內線 伴手禮"
+          },
+          {
+            time: "出境前必讀",
+            category: "spot",
+            important: true,
+            isMust: true,
+            title: "【重要須知】日本出境退稅新制流程說明",
+            tag: "新退稅手續",
+            desc: "日本實施全新退稅制度：市區購買一律為<strong>先含稅結帳</strong>，出境時經<strong>機場海關確認商品帶離境才退稅</strong>。<br><strong>1. 消耗品勿拆封：</strong>密封袋不可拆，拆封視同境內消費須補稅。<br><strong>2. 託運行李流程：</strong>若免稅品在行李箱中託運，報到時請先告知地勤「有退稅品」，經海關查驗櫃檯蓋章掃描後再託運。<br><strong>3. 電子機台退稅：</strong>過安檢後在海關機台掃描護照及登機證退款至信用卡或領現。",
+            mapQuery: "新千歲機場 國際線 海關"
+          },
+          {
+            time: "班機時間",
+            category: "transport",
+            important: true,
+            isMust: false,
+            title: "出境登機・滿載幸福平安返家",
+            tag: "平安歸賦",
+            desc: "感謝各位家人親友一路上的相伴照應，帶著雪國的滿滿幸福回家！",
+            mapQuery: "新千歲機場 國際線 出境大廳"
+          }
+        ]
+      }
+    };
+
+    /* =========================================================
+       2. COUNTDOWN & NAVIGATION
+       ========================================================= */
+    function initCountdown() {
+      const departureDate = new Date('2026/12/11 06:00:00');
+      const now = new Date();
+      const diffTime = departureDate - now;
+      let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      if (diffDays < 0) diffDays = 0;
+      
+      const el1 = document.getElementById('days-count');
+      const el2 = document.getElementById('banner-days');
+      if (el1) el1.innerText = diffDays;
+      if (el2) el2.innerText = `${diffDays} 天`;
+    }
+
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      const target = document.getElementById(`tab-${tabId}`);
+      if (target) {
+        target.classList.remove('hidden');
+        target.classList.add('tab-pop-anim');
+      }
+
+      document.querySelectorAll('.tab-nav-btn').forEach(btn => {
+        btn.classList.remove('bg-book-yellow');
+        btn.classList.add('bg-white');
+      });
+      const activeBtn = document.getElementById(`btn-tab-${tabId}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-white');
+        activeBtn.classList.add('bg-book-yellow');
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    /* 行程切換 (Day 1 - Day 6) */
+    function selectDay(dayNum) {
+      document.querySelectorAll('.day-tab').forEach(btn => {
+        const d = parseInt(btn.getAttribute('data-day'));
+        if (d === dayNum) {
+          btn.classList.remove('bg-white');
+          btn.classList.add('bg-book-yellow');
+        } else {
+          btn.classList.remove('bg-book-yellow');
+          btn.classList.add('bg-white');
+        }
+      });
+
+      renderTimeline(dayNum);
+    }
+
+    function renderTimeline(dayNum) {
+      const data = dailyItinerary[dayNum];
+      const container = document.getElementById('day-timeline-container');
+      if (!data || !container) return;
+
+      let html = `
+        <div class="bg-book-card border-ink rounded-3xl p-3.5 shadow-book flex items-center justify-between">
+          <div>
+            <span class="text-[10px] font-bold text-book-coral">${data.date} ｜ 交通方式：${data.trans}</span>
+            <h3 class="text-sm font-black text-book-ink">${data.title}</h3>
+          </div>
+          <span class="text-xs font-black bg-white border-ink-2 px-2.5 py-1 rounded-xl shadow-book-sm">
+            ${data.items.length} 站
+          </span>
+        </div>
+        <div class="space-y-3 pt-1">
+      `;
+
+      data.items.forEach(item => {
+        const isImportant = item.important;
+        const isMust = item.isMust;
+        const catInfo = CATEGORY_MAP[item.category] || CATEGORY_MAP.spot;
+
+        html += `
+          <div class="bg-white border-ink rounded-3xl p-3.5 shadow-book relative transition hover:border-book-coral ${isImportant ? 'bg-book-coralLight/40' : ''}">
+            
+            <div class="flex items-start justify-between gap-2">
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <!-- 醒目類別 Icon -->
+                <span class="inline-flex items-center gap-1 text-[10px] font-black ${catInfo.color} ${catInfo.textColor} border-ink-2 px-2 py-0.5 rounded-xl shadow-book-sm">
+                  <i class="${catInfo.icon}"></i>
+                  <span>${catInfo.name}</span>
+                </span>
+
+                <span class="text-xs font-black text-book-ink bg-white border-ink-2 px-2 py-0.5 rounded-xl shadow-book-sm">
+                  ${item.time}
+                </span>
+
+                <span class="text-[10px] font-black bg-book-card border-ink-2 px-2 py-0.5 rounded-xl shadow-book-sm text-book-ink">
+                  ${item.tag}
+                </span>
+
+                ${isMust ? '<span class="text-[10px] font-black bg-book-coral text-white border-ink-2 px-2 py-0.5 rounded-xl shadow-book-sm animate-pulse">必去 ★</span>' : ''}
+              </div>
+
+              ${isImportant ? '<span class="text-[10px] font-black text-book-coral flex-shrink-0"><i class="fa-solid fa-bell mr-0.5"></i>重要時刻</span>' : ''}
+            </div>
+
+            <h4 class="text-xs font-black text-book-ink mt-2">${item.title}</h4>
+            
+            <div class="text-[11px] font-bold text-book-ink/80 mt-1 leading-relaxed">
+              ${item.desc}
+            </div>
+
+            <div class="mt-2.5 pt-2 border-t-2 border-book-ink/10 flex items-center justify-between">
+              <span class="text-[10px] text-book-gray font-bold">點選開啟定位</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.mapQuery)}" target="_blank" class="inline-flex items-center gap-1 px-3 py-1 bg-book-card hover:bg-book-yellow border-ink-2 rounded-xl text-[11px] font-black shadow-book-sm btn-press">
+                <i class="fa-solid fa-location-dot text-book-coral"></i>
+                <span>開啟 Google Maps</span>
+              </a>
+            </div>
+          </div>
+        `;
+      });
+
+      html += `</div>`;
+      container.innerHTML = html;
+    }
+
+    /* 導覽分區切換 */
+    function switchGuideSection(secId) {
+      document.querySelectorAll('.guide-section').forEach(el => el.classList.add('hidden'));
+      const target = document.getElementById(`guide-sec-${secId}`);
+      if (target) target.classList.remove('hidden');
+
+      document.querySelectorAll('.guide-nav-btn').forEach(btn => {
+        btn.classList.remove('bg-book-yellow');
+        btn.classList.add('bg-white');
+      });
+      const activeBtn = document.getElementById(`btn-guide-${secId}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-white');
+        activeBtn.classList.add('bg-book-yellow');
+      }
+    }
+
+    /* =========================================================
+       3. WALLET: 算式計算機 + 分帳成員管理 + 債務最優結算
+       ========================================================= */
+    let customRate = 0.215;
+    let receiptBase64 = null;
+    // 預設成員依照家族成員填寫
+    const DEFAULT_MEMBERS = ['秉原', '佑珊', '雅琪', '芷涵', '雅玲', '秉輝', '婷婷','秀川'];
+
+    function initRate() {
+      const saved = localStorage.getItem('hokkaido_rate');
+      if (saved) {
+        customRate = parseFloat(saved);
+        const input = document.getElementById('rate-val');
+        if (input) input.value = customRate;
+      }
+    }
+
+    function updateCustomRate() {
+      const input = document.getElementById('rate-val');
+      const val = parseFloat(input.value);
+      if (!isNaN(val) && val > 0) {
+        customRate = val;
+        localStorage.setItem('hokkaido_rate', customRate);
+        calculateExpression();
+        renderExpenses();
+        recalculateSettlement();
+        showCuteToast('已更新匯率為 ' + customRate);
+      }
+    }
+
+    function calculateExpression() {
+      const input = document.getElementById('calc-input');
+      const out = document.getElementById('calc-result');
+      const expr = input.value.trim();
+      if (!expr) {
+        out.innerText = 'NT$ 0';
+        return;
+      }
+
+      const sanitized = expr.replace(/[^0-9+\-*/().]/g, '');
+      try {
+        const jpy = Function('"use strict"; return (' + sanitized + ')')();
+        if (typeof jpy === 'number' && !isNaN(jpy)) {
+          const twd = Math.round(jpy * customRate);
+          out.innerText = `NT$ ${twd.toLocaleString()} (¥${Math.round(jpy).toLocaleString()})`;
+        } else {
+          out.innerText = '算式錯誤';
+        }
+      } catch (e) {
+        out.innerText = '格式不正確';
+      }
+    }
+
+    /* 分帳成員系統 (LocalStorage) */
+    let currentSplitMode = 'equal'; // 'equal' | 'custom'
+
+    function setSplitMode(mode) {
+      currentSplitMode = mode;
+      const btnEqual = document.getElementById('btn-mode-equal');
+      const btnCustom = document.getElementById('btn-mode-custom');
+      const boxEqual = document.getElementById('equal-split-box');
+      const boxCustom = document.getElementById('custom-split-box');
+
+      if (mode === 'equal') {
+        btnEqual.classList.replace('bg-white', 'bg-book-yellow');
+        btnCustom.classList.replace('bg-book-yellow', 'bg-white');
+        boxEqual.classList.remove('hidden');
+        boxCustom.classList.add('hidden');
+      } else {
+        btnCustom.classList.replace('bg-white', 'bg-book-yellow');
+        btnEqual.classList.replace('bg-book-yellow', 'bg-white');
+        boxCustom.classList.remove('hidden');
+        boxEqual.classList.add('hidden');
+        checkCustomSplitBalance();
+      }
+    }
+
+    function handleTotalAmountChange() {
+      if (currentSplitMode === 'custom') {
+        checkCustomSplitBalance();
+      }
+    }
+
+    function checkCustomSplitBalance() {
+      const totalAmt = parseFloat(document.getElementById('exp-amount').value) || 0;
+      const statusEl = document.getElementById('custom-diff-status');
+      const alertBox = document.getElementById('custom-split-diff-alert');
+      if (!statusEl || !alertBox) return { isValid: false, diff: 0, totalAmt, allocated: 0 };
+
+      const members = getMembers();
+      let allocated = 0;
+
+      members.forEach(m => {
+        const cb = document.getElementById(`custom-chk-${m}`);
+        const input = document.getElementById(`custom-val-${m}`);
+        if (cb && cb.checked && input) {
+          const val = parseFloat(input.value) || 0;
+          allocated += val;
+        }
+      });
+
+      const diff = Math.round(totalAmt - allocated);
+
+      if (totalAmt <= 0) {
+        statusEl.innerHTML = `<span class="text-book-gray">請先在上方輸入總金額</span>`;
+        alertBox.className = "p-2 rounded-xl border-ink-2 text-xs font-black bg-white text-book-ink flex items-center justify-between";
+        return { isValid: false, diff: 0, totalAmt, allocated };
+      }
+
+      if (diff === 0) {
+        statusEl.innerHTML = `<span class="text-book-bamboo">✓ 金額完全吻合 (合計 ¥${allocated.toLocaleString()})</span>`;
+        alertBox.className = "p-2 rounded-xl border-ink-2 text-xs font-black bg-book-bambooLight text-book-ink flex items-center justify-between";
+        return { isValid: true, diff: 0, totalAmt, allocated };
+      } else if (diff > 0) {
+        statusEl.innerHTML = `<span class="text-book-coral animate-pulse">⚠️ 尚餘 ¥${diff.toLocaleString()} 未分配 (已配 ¥${allocated.toLocaleString()} / 總 ¥${totalAmt.toLocaleString()})</span>`;
+        alertBox.className = "p-2 rounded-xl border-ink-2 text-xs font-black bg-book-coralLight text-book-ink flex items-center justify-between";
+        return { isValid: false, diff, totalAmt, allocated };
+      } else {
+        const over = Math.abs(diff);
+        statusEl.innerHTML = `<span class="text-book-coral animate-pulse">⚠️ 已超額分配 ¥${over.toLocaleString()} (已配 ¥${allocated.toLocaleString()} / 總 ¥${totalAmt.toLocaleString()})</span>`;
+        alertBox.className = "p-2 rounded-xl border-ink-2 text-xs font-black bg-book-coralLight text-book-ink flex items-center justify-between";
+        return { isValid: false, diff, totalAmt, allocated };
+      }
+    }
+
+    function handleCustomCheckboxToggle(member) {
+      const cb = document.getElementById(`custom-chk-${member}`);
+      const input = document.getElementById(`custom-val-${member}`);
+      if (cb && input) {
+        input.disabled = !cb.checked;
+        if (!cb.checked) {
+          input.value = '';
+        }
+      }
+      checkCustomSplitBalance();
+    }
+
+    function autoFillRemainingCustomAmount() {
+      const totalAmt = parseFloat(document.getElementById('exp-amount').value) || 0;
+      if (totalAmt <= 0) {
+        showCuteToast('請先輸入日幣總金額');
+        return;
+      }
+
+      const members = getMembers();
+      let checkedMembers = [];
+      let currentAllocated = 0;
+
+      members.forEach(m => {
+        const cb = document.getElementById(`custom-chk-${m}`);
+        const input = document.getElementById(`custom-val-${m}`);
+        if (cb && cb.checked) {
+          checkedMembers.push(m);
+          currentAllocated += (parseFloat(input.value) || 0);
+        }
+      });
+
+      if (checkedMembers.length === 0) {
+        showCuteToast('請先勾選要參與分攤的成員');
+        return;
+      }
+
+      const emptyMembers = checkedMembers.filter(m => {
+        const input = document.getElementById(`custom-val-${m}`);
+        return !input.value || parseFloat(input.value) === 0;
+      });
+
+      const remaining = totalAmt - (currentAllocated - emptyMembers.reduce((sum, m) => sum + (parseFloat(document.getElementById(`custom-val-${m}`).value) || 0), 0));
+
+      if (remaining <= 0) {
+        showCuteToast('目前已無剩餘金額可分配');
+        return;
+      }
+
+      const targets = emptyMembers.length > 0 ? emptyMembers : checkedMembers;
+      const perAmt = Math.floor(remaining / targets.length);
+      let rest = remaining - (perAmt * targets.length);
+
+      targets.forEach((m, idx) => {
+        const input = document.getElementById(`custom-val-${m}`);
+        const finalVal = perAmt + (idx === 0 ? rest : 0);
+        input.value = finalVal;
+      });
+
+      checkCustomSplitBalance();
+      showCuteToast('已自動分配剩餘金額');
+    }
+
+    function getMembers() {
+      try {
+        const data = localStorage.getItem('hokkaido_members');
+        return data ? JSON.parse(data) : DEFAULT_MEMBERS;
+      } catch (e) {
+        return DEFAULT_MEMBERS;
+      }
+    }
+
+    function saveMembers(arr) {
+      localStorage.setItem('hokkaido_members', JSON.stringify(arr));
+      renderMemberElements();
+    }
+
+    function addNewMember() {
+      const input = document.getElementById('new-member-name');
+      const name = input.value.trim();
+      if (!name) return;
+      const list = getMembers();
+      if (list.includes(name)) {
+        showCuteToast('成員已存在');
+        return;
+      }
+      list.push(name);
+      saveMembers(list);
+      input.value = '';
+      showCuteToast(`已新增成員：${name}`);
+    }
+
+    function removeMember(name) {
+      let list = getMembers();
+      if (list.length <= 1) {
+        showCuteToast('至少需保留一位成員');
+        return;
+      }
+      list = list.filter(m => m !== name);
+      saveMembers(list);
+      showCuteToast(`已移除成員：${name}`);
+    }
+
+    function renderMemberElements() {
+      const members = getMembers();
+      
+      const tagsContainer = document.getElementById('members-tags-container');
+      if (tagsContainer) {
+        tagsContainer.innerHTML = members.map(m => `
+          <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-white border-ink-2 rounded-xl text-xs font-black shadow-book-sm">
+            <span>${m}</span>
+            <button onclick="removeMember('${m}')" class="text-book-coral hover:text-red-600 ml-0.5">
+              <i class="fa-solid fa-xmark text-[10px]"></i>
+            </button>
+          </span>
+        `).join('');
+      }
+
+      const payerSelect = document.getElementById('exp-payer');
+      if (payerSelect) {
+        payerSelect.innerHTML = members.map(m => `<option value="${m}">${m} (先墊款)</option>`).join('');
+      }
+
+      // 均分勾選
+      const splitContainer = document.getElementById('split-checkboxes-container');
+      if (splitContainer) {
+        splitContainer.innerHTML = members.map(m => `
+          <label class="flex items-center gap-1.5 p-1 text-[11px] font-black cursor-pointer">
+            <input type="checkbox" name="split_person" value="${m}" checked class="rounded border-ink-2 accent-book-coral w-3.5 h-3.5">
+            <span class="truncate">${m}</span>
+          </label>
+        `).join('');
+      }
+
+      // 自訂金額清單
+      const customContainer = document.getElementById('custom-split-inputs-container');
+      if (customContainer) {
+        customContainer.innerHTML = members.map(m => `
+          <div class="flex items-center gap-2 p-1.5 bg-white border-ink-2 rounded-xl">
+            <label class="flex items-center gap-1.5 w-24 flex-shrink-0 cursor-pointer">
+              <input type="checkbox" id="custom-chk-${m}" checked onchange="handleCustomCheckboxToggle('${m}')" class="rounded border-ink-2 accent-book-coral w-3.5 h-3.5">
+              <span class="text-xs font-black text-book-ink truncate">${m}</span>
+            </label>
+            <div class="flex-1 flex items-center gap-1">
+              <span class="text-xs text-book-gray font-bold">¥</span>
+              <input type="number" id="custom-val-${m}" placeholder="0" oninput="checkCustomSplitBalance()" class="w-full px-2 py-1 bg-book-card border-ink-2 rounded-lg text-xs font-black text-book-ink focus:outline-none">
+            </div>
+          </div>
+        `).join('');
+      }
+
+      checkCustomSplitBalance();
+    }
+
+    function toggleSelectAllSplitters() {
+      const boxes = document.querySelectorAll('input[name="split_person"]');
+      const allChecked = Array.from(boxes).every(b => b.checked);
+      boxes.forEach(b => b.checked = !allChecked);
+    }
+
+    /* 圖片上傳與 Canvas 壓縮 */
+    function handleReceiptPhoto(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        const img = new Image();
+        img.onload = function() {
+          const canvas = document.createElement('canvas');
+          let w = img.width;
+          let h = img.height;
+          const maxDim = 420;
+          if (w > h && w > maxDim) {
+            h = Math.round((h * maxDim) / w);
+            w = maxDim;
+          } else if (h > maxDim) {
+            w = Math.round((w * maxDim) / h);
+            h = maxDim;
+          }
+          canvas.width = w;
+          canvas.height = h;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, w, h);
+          receiptBase64 = canvas.toDataURL('image/jpeg', 0.6);
+
+          document.getElementById('preview-img').src = receiptBase64;
+          document.getElementById('preview-box').classList.remove('hidden');
+          document.getElementById('photo-status-text').innerText = '收據已附加';
+        };
+        img.src = event.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function clearSelectedPhoto() {
+      receiptBase64 = null;
+      document.getElementById('exp-file').value = '';
+      document.getElementById('preview-box').classList.add('hidden');
+      document.getElementById('photo-status-text').innerText = '拍照 / 選擇收據';
+    }
+
+    /* 記帳記錄 LocalStorage */
+    function getExpenses() {
+      try {
+        const d = localStorage.getItem('hokkaido_expenses');
+        return d ? JSON.parse(d) : [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function saveExpenseRecord() {
+      const title = document.getElementById('exp-title').value.trim();
+      const amount = parseFloat(document.getElementById('exp-amount').value);
+      const payer = document.getElementById('exp-payer').value;
+
+      if (!title) {
+        showCuteToast('請輸入消費項目名稱');
+        return;
+      }
+      if (isNaN(amount) || amount <= 0) {
+        showCuteToast('請輸入正確日幣總金額');
+        return;
+      }
+
+      let splitMode = currentSplitMode;
+      let splitShares = {}; // { '成員名': 金額 }
+      let splitters = [];
+
+      if (splitMode === 'equal') {
+        const splitCheckboxes = document.querySelectorAll('input[name="split_person"]:checked');
+        splitters = Array.from(splitCheckboxes).map(cb => cb.value);
+
+        if (splitters.length === 0) {
+          showCuteToast('至少需要勾選一位平分對象');
+          return;
+        }
+
+        const perPerson = Math.floor(amount / splitters.length);
+        const remainder = amount - (perPerson * splitters.length);
+        splitters.forEach((m, idx) => {
+          splitShares[m] = perPerson + (idx === 0 ? remainder : 0);
+        });
+      } else {
+        // 自訂金額模式
+        const balanceCheck = checkCustomSplitBalance();
+        if (!balanceCheck.isValid) {
+          if (balanceCheck.diff > 0) {
+            showCuteToast(`⚠️ 尚有 ¥${balanceCheck.diff.toLocaleString()} 未分配，請檢查金額`);
+          } else {
+            showCuteToast(`⚠️ 已超額分配 ¥${Math.abs(balanceCheck.diff).toLocaleString()}，請檢查金額`);
+          }
+          return;
+        }
+
+        const members = getMembers();
+        members.forEach(m => {
+          const cb = document.getElementById(`custom-chk-${m}`);
+          const input = document.getElementById(`custom-val-${m}`);
+          if (cb && cb.checked && input) {
+            const val = parseFloat(input.value) || 0;
+            if (val > 0) {
+              splitShares[m] = val;
+              splitters.push(m);
+            }
+          }
+        });
+
+        if (splitters.length === 0) {
+          showCuteToast('至少需輸入一位分攤成員的金額');
+          return;
+        }
+      }
+
+      const newRecord = {
+        id: Date.now(),
+        title: title,
+        amountJPY: amount,
+        payer: payer,
+        splitMode: splitMode,
+        splitters: splitters,
+        splitShares: splitShares,
+        photo: receiptBase64,
+        date: new Date().toLocaleDateString('zh-TW', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })
+      };
+
+      const list = getExpenses();
+      list.unshift(newRecord);
+      localStorage.setItem('hokkaido_expenses', JSON.stringify(list));
+
+      document.getElementById('exp-title').value = '';
+      document.getElementById('exp-amount').value = '';
+      clearSelectedPhoto();
+      
+      // 清空自訂輸入
+      getMembers().forEach(m => {
+        const input = document.getElementById(`custom-val-${m}`);
+        if (input) input.value = '';
+      });
+      checkCustomSplitBalance();
+
+      renderExpenses();
+      recalculateSettlement();
+      showCuteToast('記帳成功！分帳已即時更新');
+    }
+
+    function deleteExpense(id) {
+      let list = getExpenses();
+      list = list.filter(item => item.id !== id);
+      localStorage.setItem('hokkaido_expenses', JSON.stringify(list));
+      renderExpenses();
+      recalculateSettlement();
+      showCuteToast('已刪除此筆記帳');
+    }
+
+    let confirmClearExpense = false;
+    function clearAllExpensesPrompt() {
+      if (!confirmClearExpense) {
+        confirmClearExpense = true;
+        showCuteToast('再按一次「清空記帳」確定刪除所有資料');
+        setTimeout(() => { confirmClearExpense = false; }, 3500);
+        return;
+      }
+      confirmClearExpense = false;
+      localStorage.removeItem('hokkaido_expenses');
+      renderExpenses();
+      recalculateSettlement();
+      showCuteToast('所有記帳已清空');
+    }
+
+    function renderExpenses() {
+      const list = getExpenses();
+      const container = document.getElementById('expense-records-container');
+      if (!container) return;
+
+      if (list.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-6 text-book-gray text-xs bg-white border-ink rounded-3xl">
+            <i class="fa-solid fa-receipt text-2xl text-book-gray/30 mb-1"></i>
+            <div>尚無記帳紀錄，在上方輸入第一筆支出</div>
+          </div>
+        `;
+        return;
+      }
+
+      const allMembersCount = getMembers().length;
+
+      container.innerHTML = list.map(item => {
+        const twd = Math.round(item.amountJPY * customRate);
+        const isCustom = item.splitMode === 'custom';
+        
+        let splitDetailText = '';
+        if (isCustom && item.splitShares) {
+          const detailList = Object.entries(item.splitShares).map(([m, amt]) => `${m}: ¥${amt.toLocaleString()}`).join(', ');
+          splitDetailText = `<span class="text-book-coral font-bold">[自訂] ${detailList}</span>`;
+        } else {
+          const splitText = item.splitters.length === allMembersCount ? '全員平分' : `${item.splitters.length} 人平分 (${item.splitters.join(',')})`;
+          splitDetailText = `<span>分：${splitText}</span>`;
+        }
+
+        return `
+          <div class="bg-white border-ink rounded-3xl p-3 shadow-book flex items-center justify-between gap-2.5">
+            <div class="flex items-center gap-2 overflow-hidden">
+              ${item.photo ? `
+                <img src="${item.photo}" onclick="openPhotoModal('${item.title}', '${item.photo}')" class="w-11 h-11 rounded-xl border-ink-2 object-cover cursor-pointer flex-shrink-0" alt="收據">
+              ` : `
+                <div class="w-11 h-11 rounded-xl bg-book-card border-ink-2 flex items-center justify-center text-xs text-book-coral flex-shrink-0">
+                  <i class="fa-solid fa-tag"></i>
+                </div>
+              `}
+              <div class="overflow-hidden">
+                <div class="text-xs font-black text-book-ink truncate flex items-center gap-1">
+                  <span>${item.title}</span>
+                  ${isCustom ? '<span class="text-[9px] bg-book-coral text-white px-1.5 py-0.2 rounded-md font-black border-ink-2">指定分帳</span>' : '<span class="text-[9px] bg-book-yellow text-book-ink px-1.5 py-0.2 rounded-md font-black border-ink-2">均分</span>'}
+                </div>
+                <div class="text-[10px] text-book-gray font-bold mt-0.5 truncate">
+                  <span class="text-book-coral">付：${item.payer}</span> ｜ ${splitDetailText}
+                </div>
+              </div>
+            </div>
+
+            <div class="text-right flex-shrink-0 flex items-center gap-2">
+              <div>
+                <div class="text-xs font-black text-book-ink">¥ ${item.amountJPY.toLocaleString()}</div>
+                <div class="text-[10px] text-book-coral font-bold">NT$ ${twd.toLocaleString()}</div>
+              </div>
+              <button onclick="deleteExpense(${item.id})" class="text-book-gray hover:text-book-coral p-1 text-xs">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    /* 分帳最佳化演算法 (全面相容指定分帳與均分) */
+    function recalculateSettlement() {
+      const expenses = getExpenses();
+      const members = getMembers();
+      const summaryContainer = document.getElementById('settlement-summary-container');
+      const debtContainer = document.getElementById('debt-transfer-container');
+
+      if (!summaryContainer || !debtContainer) return;
+
+      const balances = {};
+      members.forEach(m => {
+        balances[m] = 0;
+      });
+
+      expenses.forEach(item => {
+        const amt = item.amountJPY;
+        const payer = item.payer;
+
+        // 代墊人先加上總額
+        if (balances[payer] !== undefined) {
+          balances[payer] += amt;
+        }
+
+        // 依據是否為指定金額分攤扣除
+        if (item.splitShares && Object.keys(item.splitShares).length > 0) {
+          Object.entries(item.splitShares).forEach(([person, shareAmt]) => {
+            if (balances[person] !== undefined) {
+              balances[person] -= shareAmt;
+            }
+          });
+        } else {
+          // 向後相容舊有平均分攤資料
+          const splitters = item.splitters && item.splitters.length > 0 ? item.splitters : [payer];
+          const perPerson = amt / splitters.length;
+          splitters.forEach(s => {
+            if (balances[s] !== undefined) {
+              balances[s] -= perPerson;
+            }
+          });
+        }
+      });
+
+      summaryContainer.innerHTML = members.map(m => {
+        const bal = Math.round(balances[m]);
+        const balTwd = Math.round(bal * customRate);
+        const isPlus = bal > 0;
+        const isMinus = bal < 0;
+        const badgeColor = isPlus ? 'text-book-bamboo' : (isMinus ? 'text-book-coral' : 'text-book-gray');
+        const badgeText = isPlus ? `應收 ¥${bal.toLocaleString()} (約 NT$ ${balTwd.toLocaleString()})` : (isMinus ? `應付 ¥${Math.abs(bal).toLocaleString()} (約 NT$ ${Math.abs(balTwd).toLocaleString()})` : '已結清');
+
+        return `
+          <div class="flex items-center justify-between text-xs font-bold bg-white p-2 rounded-xl border-ink-2">
+            <span class="font-black text-book-ink">${m}</span>
+            <span class="text-[11px] ${badgeColor} font-black">${badgeText}</span>
+          </div>
+        `;
+      }).join('');
+
+      let debtors = [];
+      let creditors = [];
+
+      members.forEach(m => {
+        const bal = Math.round(balances[m]);
+        if (bal < -1) debtors.push({ name: m, amount: -bal });
+        if (bal > 1) creditors.push({ name: m, amount: bal });
+      });
+
+      debtors.sort((a, b) => b.amount - a.amount);
+      creditors.sort((a, b) => b.amount - a.amount);
+
+      let transfers = [];
+      let i = 0;
+      let j = 0;
+
+      while (i < debtors.length && j < creditors.length) {
+        const payAmt = Math.min(debtors[i].amount, creditors[j].amount);
+        if (payAmt > 0) {
+          const payTwd = Math.round(payAmt * customRate);
+          transfers.push({
+            from: debtors[i].name,
+            to: creditors[j].name,
+            jpy: Math.round(payAmt),
+            twd: payTwd
+          });
+        }
+
+        debtors[i].amount -= payAmt;
+        creditors[j].amount -= payAmt;
+
+        if (debtors[i].amount <= 1) i++;
+        if (creditors[j].amount <= 1) j++;
+      }
+
+      if (transfers.length === 0) {
+        debtContainer.innerHTML = `<div class="p-2 bg-white rounded-xl border-ink-2 text-center text-book-gray text-[11px]">太好了！目前大家代墊款項均已結清 🎉</div>`;
+      } else {
+        debtContainer.innerHTML = transfers.map(t => `
+          <div class="p-2 bg-white rounded-xl border-ink-2 flex items-center justify-between">
+            <div class="flex items-center gap-1.5">
+              <span class="font-black text-book-coral">${t.from}</span>
+              <span class="text-book-gray text-[10px]">應付款給</span>
+              <span class="font-black text-book-bamboo">${t.to}</span>
+            </div>
+            <div class="text-right">
+              <span class="font-black text-xs text-book-ink">¥ ${t.jpy.toLocaleString()}</span>
+              <span class="text-[10px] text-book-coral font-bold block">NT$ ${t.twd.toLocaleString()}</span>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    function openPhotoModal(title, base64) {
+      document.getElementById('photo-modal-caption').innerText = title || '收據相片';
+      document.getElementById('photo-modal-img').src = base64;
+      const modal = document.getElementById('photo-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closePhotoModal() {
+      const modal = document.getElementById('photo-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    /* =========================================================
+       4. LISTS: 行前 CheckList & 智慧備忘錄
+       ========================================================= */
+    const PACKING_CONFIG = [
+      {
+        cat: "隨身必備證件 & 3C",
+        items: [
+          { id: "p_pass", text: "護照實體 (效期需 6 個月以上)" },
+          { id: "p_vjw", text: "填妥 Visit Japan Web (入境 QR Code 截圖)" },
+          { id: "p_sim", text: "日本 eSIM 或上網漫遊卡" },
+          { id: "p_cash", text: "日幣現金 & 高海外回饋信用卡" },
+          { id: "p_power", text: "行動電源 (依規定需隨身攜帶不可託運)" },
+          { id: "p_suit", text: "婚禮正裝 (西裝/領帶/深色皮鞋/優雅套裝)" }
+        ]
+      },
+      {
+        cat: "戶外防風雪 & 防滑穿著",
+        items: [
+          { id: "p_boots", text: "防水防滑雪靴 (深紋橡膠鞋底防滑)" },
+          { id: "p_coat", text: "防風防水長版保暖羽絨外套" },
+          { id: "p_gloves", text: "防水觸控保暖手套" },
+          { id: "p_beanie", text: "保暖毛帽 (蓋住耳朵佳)、厚圍巾" }
+        ]
+      },
+      {
+        cat: "託運行李與保養藥品",
+        items: [
+          { id: "p_heat", text: "發熱衣、發熱褲 (玉米式穿搭方便穿脫)" },
+          { id: "p_swim", text: "泳衣/泳褲 (星野微笑海灘造浪池使用)" },
+          { id: "p_lotion", text: "超保濕乳霜、身體乳液 (防雪地乾燥脫皮)" },
+          { id: "p_lip", text: "滋潤護唇膏、保濕眼藥水" },
+          { id: "p_warmer", text: "手握暖暖包、鞋底暖足貼" },
+          { id: "p_meds", text: "個人常備藥 (感冒藥、腸胃藥、止痛藥)" }
+        ]
+      }
+    ];
+
+    function getPackingState() {
+      try {
+        const d = localStorage.getItem('hokkaido_packing');
+        return d ? JSON.parse(d) : {};
+      } catch (e) {
+        return {};
+      }
+    }
+
+    function togglePacking(id) {
+      const state = getPackingState();
+      state[id] = !state[id];
+      localStorage.setItem('hokkaido_packing', JSON.stringify(state));
+      renderPacking();
+    }
+
+    function resetPackingState() {
+      localStorage.removeItem('hokkaido_packing');
+      renderPacking();
+      showCuteToast('已重設檢查清單');
+    }
+
+    function renderPacking() {
+      const state = getPackingState();
+      const container = document.getElementById('packing-groups-container');
+      if (!container) return;
+
+      let total = 0;
+      let checked = 0;
+      let html = '';
+
+      PACKING_CONFIG.forEach(group => {
+        html += `
+          <div class="space-y-1.5">
+            <h4 class="text-xs font-black text-book-ink flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-book-coral"></span>
+              ${group.cat}
+            </h4>
+            <div class="space-y-1">
+        `;
+
+        group.items.forEach(item => {
+          total++;
+          const isDone = !!state[item.id];
+          if (isDone) checked++;
+
+          html += `
+            <label class="flex items-center gap-2 p-2 bg-book-card border-ink-2 rounded-2xl cursor-pointer select-none transition hover:bg-book-yellowLight">
+              <input type="checkbox" onchange="togglePacking('${item.id}')" ${isDone ? 'checked' : ''} class="rounded border-ink-2 accent-book-coral w-4 h-4 cursor-pointer">
+              <span class="text-xs font-bold ${isDone ? 'line-through text-book-gray' : 'text-book-ink'}">${item.text}</span>
+            </label>
+          `;
+        });
+
+        html += `</div></div>`;
+      });
+
+      container.innerHTML = html;
+
+      const pct = total > 0 ? Math.round((checked / total) * 100) : 0;
+      document.getElementById('pack-percent').innerText = `${pct}% (${checked}/${total})`;
+      document.getElementById('pack-bar').style.width = `${pct}%`;
+    }
+
+    /* 備忘錄 (URL 自動轉換為按鈕) */
+    function getMemos() {
+      try {
+        const d = localStorage.getItem('hokkaido_memos');
+        return d ? JSON.parse(d) : [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function saveNewMemo() {
+      const txt = document.getElementById('memo-textarea').value.trim();
+      if (!txt) {
+        showCuteToast('請輸入筆記內容');
+        return;
+      }
+      const list = getMemos();
+      list.unshift({
+        id: Date.now(),
+        content: txt,
+        time: new Date().toLocaleDateString('zh-TW', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })
+      });
+      localStorage.setItem('hokkaido_memos', JSON.stringify(list));
+      document.getElementById('memo-textarea').value = '';
+      renderMemos();
+      showCuteToast('備忘筆記已儲存');
+    }
+
+    function deleteMemo(id) {
+      let list = getMemos();
+      list = list.filter(m => m.id !== id);
+      localStorage.setItem('hokkaido_memos', JSON.stringify(list));
+      renderMemos();
+      showCuteToast('已刪除筆記');
+    }
+
+    function convertUrlsToButtons(text) {
+      const urlRegex = /(https?:\/\/[^\s]+)/g;
+      return text.replace(urlRegex, function(url) {
+        return `
+          <a href="${url}" target="_blank" class="inline-flex items-center gap-1 my-1 px-2.5 py-1 bg-white border-ink-2 rounded-xl text-book-coral hover:bg-book-yellow text-[11px] font-black shadow-book-sm">
+            <i class="fa-solid fa-link text-[10px]"></i>
+            <span class="truncate max-w-[190px]">${url}</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+          </a>
+        `;
+      });
+    }
+
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.innerText = str;
+      return div.innerHTML;
+    }
+
+    function renderMemos() {
+      const list = getMemos();
+      const container = document.getElementById('memos-list-container');
+      if (!container) return;
+
+      if (list.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-5 text-book-gray text-xs bg-book-card border-ink-2 border-dashed rounded-2xl">
+            暫無隨身筆記
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = list.map(m => {
+        const formatted = convertUrlsToButtons(escapeHtml(m.content)).replace(/\n/g, '<br>');
+        return `
+          <div class="bg-book-card border-ink-2 rounded-2xl p-2.5 space-y-1 relative">
+            <div class="flex items-center justify-between text-[10px] text-book-gray font-bold border-b border-book-ink/10 pb-1">
+              <span>${m.time}</span>
+              <button onclick="deleteMemo(${m.id})" class="text-book-gray hover:text-book-coral">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="text-xs font-bold text-book-ink leading-relaxed break-words">
+              ${formatted}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    /* 可愛 Toast 提示 */
+    function showCuteToast(msg) {
+      const toast = document.getElementById('cute-toast');
+      if (!toast) return;
+      toast.innerText = msg;
+      toast.classList.remove('opacity-0', '-translate-y-2');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', '-translate-y-2');
+      }, 2300);
+    }
+
+    /* =========================================================
+       5. INITIALIZATION
+       ========================================================= */
+    window.onload = function() {
+      initCountdown();
+      initRate();
+      renderTimeline(1);
+      renderMemberElements();
+      renderExpenses();
+      recalculateSettlement();
+      renderPacking();
+      renderMemos();
+    };
+  </script>
+</body>
+</html>
