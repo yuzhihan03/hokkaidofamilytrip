@@ -232,7 +232,7 @@
                 搭乘人員：<span class="text-book-coral font-black text-xs">秉原、佑珊</span>
               </div>
             </div>
-            <span class="text-xs text-book-bamboo font-black"><i class="fa-solid fa-check"></i> 早鳥組</span>
+            <span class="text-xs text-book-bamboo font-black"><i class="fa-solid fa-check"></i>第2班接駁</span>
           </div>
 
           <!-- 航班 2 -->
@@ -246,7 +246,7 @@
                 搭乘人員：<span class="text-book-coral font-black text-xs">雅琪</span>
               </div>
             </div>
-            <span class="text-[10px] text-book-water font-black">第1班接駁</span>
+            <span class="text-[10px] text-book-water font-black">第2班接駁</span>
           </div>
 
           <!-- 航班 3 -->
@@ -1040,23 +1040,13 @@
         trans: "接駁巴士 (約 2.5 hr)",
         items: [
           {
-            time: "13:15 集合 / 13:30 發車",
-            category: "transport",
-            important: true,
-            isMust: false,
-            title: "第一班接駁巴士集合出發",
-            tag: "專車接送",
-            desc: "集合點：新千歲機場 國際線 2F 到達口 Information 資訊中心櫃檯。<br>負責人：Albee 婷羽。車程約 2.5 小時，車內請勿飲食，請先在機場簡單用餐。",
-            mapQuery: "新千歲機場 國際線 到達口"
-          },
-          {
             time: "15:00 集合 / 15:30 發車",
             category: "transport",
             important: true,
             isMust: false,
             title: "第二班接駁巴士集合出發",
             tag: "專車接送",
-            desc: "集合點：新千歲機場 國際線 2F 到達口 Information 資訊中心櫃檯。<br>負責人：鮑伯 (日文溝通：杰錕)。車程約 2.5 小時。車內請勿飲食，請先在機場簡單用餐。",
+            desc: "集合點：新千歲機場 國際線 2F 到達口 Information 資訊中心櫃檯。<br>負責人：鮑伯 (日文溝通：杰錕)。車程約 2.5 小時。<br><span class='text-book-coral font-black'>※車內請勿飲食，請先在機場簡單用餐</span>",
             mapQuery: "新千歲機場 國際線 到達口"
           },
           {
@@ -1214,7 +1204,7 @@
             time: "10:00 - 10:45",
             category: "spot",
             important: false,
-            isMust: true,
+            isMust: false,
             title: "小樽運河遊船 (Otaru Canal Cruise)",
             tag: "必去景點",
             desc: "<strong>營業時間：10:00 - 16:00 (夜航至 20:00)</strong><br>可選擇搭乘復古遊船穿梭中央橋至小樽港，從水面仰望石造倉庫與冬日雪景的絕佳視角。",
@@ -1241,37 +1231,37 @@
             mapQuery: "ポセイ丼 丼兵衛"
           },
           {
-            time: "午後自由活動 (時間不限)",
+            time: "自行規劃",
             category: "spot",
             important: false,
             isMust: false,
             title: "小樽出拔小路",
-            tag: "美食商場",
+            tag: "歷史街道",
             desc: "<strong>營業時間：11:00 - 21:00 (依各店家為準)</strong><br>重現大正與昭和風情的美食小巷，擁有地標「火警望樓」，可免費登頂俯瞰小樽運河與十字路口雪景。",
             mapQuery: "小樽出拔小路"
           },
           {
-            time: "(時間不限)",
+            time: "自行規劃",
             category: "spot",
             important: false,
             isMust: false,
-            title: "堺町通商店街散策",
+            title: "堺町通商店街",
             tag: "歷史街道",
             desc: "<strong>店家營業時間：約 09:00 - 18:00</strong><br>兩旁林立保留完好的百年石造洋館與倉庫，匯集各大玻璃工藝館、伴手禮店與特色咖啡館，漫步氣氛極佳。",
             mapQuery: "堺町通り商店街"
           },
           {
-            time: " (時間不限)",
+            time: "自行規劃",
             category: "shopping",
             important: false,
             isMust: false,
             title: "ちいかわ もぐもぐ本舗 小樽店",
-            tag: "人氣萌店",
+            tag: "自行規劃",
             desc: "<strong>營業時間：09:30 - 17:30</strong><br>吉伊卡哇粉絲必訪！以復古懷舊點心雜貨為主題，販售小樽限定吊飾、點心盒與限定周邊雜貨。",
             mapQuery: "ちいかわもぐもぐ本舗小樽店"
           },
           {
-            time: " (時間不限)",
+            time: "自行規劃",
             category: "food",
             important: false,
             isMust: false,
@@ -1281,7 +1271,7 @@
             mapQuery: "LeTAO 小樽總店"
           },
           {
-            time: " (時間不限)",
+            time: "自行規劃",
             category: "food",
             important: false,
             isMust: false,
@@ -1291,7 +1281,7 @@
             mapQuery: "銀之鐘1號館"
           },
           {
-            time: "(時間不限)",
+            time: "自行規劃",
             category: "spot",
             important: false,
             isMust: false,
@@ -2205,28 +2195,28 @@
           { id: "p_vjw", text: "填妥 Visit Japan Web (入境 QR Code 截圖)" },
           { id: "p_sim", text: "日本 eSIM 或上網漫遊卡" },
           { id: "p_cash", text: "日幣現金 & 高海外回饋信用卡" },
-          { id: "p_power", text: "行動電源 (依規定需隨身攜帶不可託運)" },
-          { id: "p_suit", text: "婚禮正裝 (西裝/領帶/深色皮鞋/優雅套裝)" }
+          { id: "p_power", text: "行動電源 (依規定需隨身攜帶不可託運)" }
         ]
       },
       {
-        cat: "戶外防風雪 & 防滑穿著",
+        cat: "衣著打扮",
         items: [
+          { id: "p_suit", text: "婚禮正裝 (西裝/領帶/深色皮鞋/優雅套裝)" },
           { id: "p_boots", text: "防水防滑雪靴 (深紋橡膠鞋底防滑)" },
-          { id: "p_coat", text: "防風防水長版保暖羽絨外套" },
+          { id: "p_coat", text: "防風防水保暖外套" },
           { id: "p_gloves", text: "防水觸控保暖手套" },
+          { id: "p_heat", text: "發熱衣、發熱褲 (玉米式穿搭方便穿脫)" },
           { id: "p_beanie", text: "保暖毛帽 (蓋住耳朵佳)、厚圍巾" }
         ]
       },
       {
         cat: "託運行李與保養藥品",
         items: [
-          { id: "p_heat", text: "發熱衣、發熱褲 (玉米式穿搭方便穿脫)" },
-          { id: "p_swim", text: "泳衣/泳褲 (星野微笑海灘造浪池使用)" },
           { id: "p_lotion", text: "超保濕乳霜、身體乳液 (防雪地乾燥脫皮)" },
           { id: "p_lip", text: "滋潤護唇膏、保濕眼藥水" },
           { id: "p_warmer", text: "手握暖暖包、鞋底暖足貼" },
-          { id: "p_meds", text: "個人常備藥 (感冒藥、腸胃藥、止痛藥)" }
+          { id: "p_meds", text: "個人常備藥 (感冒藥、腸胃藥、止痛藥)" },
+          { id: "p_swim", text: "泳衣/泳褲 (星野微笑海灘造浪池使用)" }
         ]
       }
     ];
