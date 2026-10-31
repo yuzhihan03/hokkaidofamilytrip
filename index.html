@@ -232,7 +232,7 @@
                 搭乘人員：<span class="text-book-coral font-black text-xs">秉原、佑珊</span>
               </div>
             </div>
-            <span class="text-xs text-book-bamboo font-black"><i class="fa-solid fa-check"></i>早鳥組</span>
+            <span class="text-xs text-book-bamboo font-black"><i class="fa-solid fa-check"></i> 早鳥組</span>
           </div>
 
           <!-- 航班 2 -->
@@ -246,7 +246,7 @@
                 搭乘人員：<span class="text-book-coral font-black text-xs">雅琪</span>
               </div>
             </div>
-            <span class="text-[10px] text-book-water font-black">第2班接駁</span>
+            <span class="text-[10px] text-book-water font-black">第1班接駁</span>
           </div>
 
           <!-- 航班 3 -->
@@ -303,7 +303,7 @@
             </div>
           </div>
 
-          <!-- 飯店 2: 札幌市區飯店 (兩間供親友各取所需) -->
+          <!-- 飯店 2: 札幌市區飯店 -->
           <div class="bg-white p-2.5 rounded-2xl border-ink-2 space-y-1.5 shadow-book-sm">
             <div class="flex items-center justify-between">
               <span class="text-xs font-black text-book-ink">SAPPORO HOTEL by GRANBELL</span>
@@ -467,7 +467,7 @@
         </div>
       </div>
 
-      <!-- 分區二：小樽漫遊篇 (城市歷史背景 + 知名景點) -->
+      <!-- 分區二：小樽漫遊篇 -->
       <div id="guide-sec-otaru" class="guide-section hidden space-y-3.5">
         <article class="bg-white border-ink rounded-3xl p-4 shadow-book space-y-3">
           <div class="flex items-center justify-between">
@@ -523,7 +523,7 @@
         </article>
       </div>
 
-      <!-- 分區三：札幌探索篇 (城市開拓背景 + 住宿附近知名景點) -->
+      <!-- 分區三：札幌探索篇 -->
       <div id="guide-sec-sapporo" class="guide-section hidden space-y-3.5">
         <article class="bg-white border-ink rounded-3xl p-4 shadow-book space-y-3">
           <div class="flex items-center justify-between">
@@ -581,191 +581,7 @@
 
     </div>
 
-    <!-- ==================== TAB 3: WALLET (記帳、匯率換算與分帳功能) ==================== -->
-    <div id="tab-wallet" class="tab-content hidden space-y-4">
-      
-      <!-- 1. 算式匯率計算機 -->
-      <div class="bg-book-card border-ink rounded-3xl p-4 shadow-book space-y-3">
-        <div class="flex items-center justify-between">
-          <h3 class="text-sm font-black text-book-ink flex items-center gap-1.5">
-            <i class="fa-solid fa-calculator text-book-coral"></i> 算式匯率換算器
-          </h3>
-          <div class="flex items-center gap-1 text-xs font-bold text-book-gray">
-            <span>自訂匯率:</span>
-            <input type="number" step="0.001" id="rate-val" value="0.215" onchange="updateCustomRate()" class="w-16 px-1.5 py-0.5 rounded-lg border-ink-2 bg-white text-center font-black text-book-ink text-xs focus:outline-none">
-          </div>
-        </div>
-
-        <div class="bg-white p-3 rounded-2xl border-ink-2 space-y-2">
-          <div class="flex items-center gap-2">
-            <input type="text" id="calc-input" placeholder="輸入算式 (例: 500+200*3)" class="flex-1 bg-transparent text-sm font-black text-book-ink focus:outline-none placeholder-book-gray/50">
-            <button onclick="calculateExpression()" class="px-3.5 py-1 bg-book-yellow border-ink-2 rounded-xl text-xs font-black shadow-book-sm btn-press">
-              ＝ 換算
-            </button>
-          </div>
-          <div class="pt-2 border-t-2 border-book-ink/10 flex justify-between items-baseline">
-            <span class="text-[11px] font-bold text-book-gray">折合台幣 (TWD)：</span>
-            <span class="text-base font-black text-book-coral" id="calc-result">NT$ 0</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2. 分帳成員名冊管理 -->
-      <div class="bg-white border-ink rounded-3xl p-4 shadow-book space-y-2.5">
-        <div class="flex items-center justify-between">
-          <h3 class="text-sm font-black text-book-ink flex items-center gap-1.5">
-            <i class="fa-solid fa-users text-book-water"></i> 家族分帳成員管理
-          </h3>
-          <span class="text-[10px] text-book-gray font-bold">預設家族乘員名單</span>
-        </div>
-
-        <div id="members-tags-container" class="flex flex-wrap gap-1.5">
-          <!-- JS 渲染成員標籤 -->
-        </div>
-
-        <div class="flex gap-2 pt-1">
-          <input type="text" id="new-member-name" placeholder="新增成員 (例: 長輩、小朋友)" class="flex-1 px-3 py-1.5 rounded-xl border-ink-2 bg-book-card text-xs font-bold text-book-ink focus:outline-none">
-          <button onclick="addNewMember()" class="px-3 py-1.5 bg-book-bamboo border-ink-2 rounded-xl text-xs font-black shadow-book-sm btn-press">
-            ＋ 加入成員
-          </button>
-        </div>
-      </div>
-
-      <!-- 3. 新增記帳表單 (代墊人與平分勾選) -->
-      <div class="bg-white border-ink rounded-3xl p-4 shadow-book space-y-3">
-        <div class="flex items-center justify-between border-b-2 border-book-ink/10 pb-2">
-          <h3 class="text-sm font-black text-book-ink flex items-center gap-1.5">
-            <i class="fa-solid fa-pen-to-square text-book-yellow"></i> 記帳開銷 (含分帳試算)
-          </h3>
-          <span class="text-[10px] font-bold text-book-coral bg-book-coralLight px-2 py-0.5 rounded-full border-ink-2">
-            LocalStorage 自動保存
-          </span>
-        </div>
-
-        <div class="space-y-2.5 text-xs font-bold">
-          <div>
-            <label class="block text-book-gray text-[11px] mb-1">消費品項名稱</label>
-            <input type="text" id="exp-title" placeholder="例: 小樽海鮮丼午餐、LeTAO 伴手禮、JR 票" class="w-full px-3 py-2 rounded-xl border-ink-2 bg-book-card text-xs font-bold text-book-ink focus:outline-none">
-          </div>
-
-          <div class="grid grid-cols-2 gap-2">
-            <div>
-              <label class="block text-book-gray text-[11px] mb-1">日幣總金額 (¥)</label>
-              <input type="number" id="exp-amount" placeholder="0" oninput="handleTotalAmountChange()" class="w-full px-3 py-2 rounded-xl border-ink-2 bg-book-card text-xs font-black text-book-ink focus:outline-none">
-            </div>
-            <div>
-              <label class="block text-book-gray text-[11px] mb-1">先付代墊人</label>
-              <select id="exp-payer" class="w-full px-2 py-2 rounded-xl border-ink-2 bg-book-card text-xs font-bold text-book-ink focus:outline-none">
-                <!-- 由 JS 動態生成選項 -->
-              </select>
-            </div>
-          </div>
-
-          <!-- 分帳模式切換 -->
-          <div class="bg-book-card p-2.5 rounded-2xl border-ink-2 space-y-2">
-            <div class="flex items-center justify-between">
-              <label class="text-book-ink text-xs font-black flex items-center gap-1">
-                <i class="fa-solid fa-scale-balanced text-book-coral"></i> 分攤方式
-              </label>
-              <div class="flex gap-1">
-                <button type="button" onclick="setSplitMode('equal')" id="btn-mode-equal" class="px-2.5 py-1 rounded-xl border-ink-2 text-[10px] font-black bg-book-yellow shadow-book-sm">
-                  均分模式
-                </button>
-                <button type="button" onclick="setSplitMode('custom')" id="btn-mode-custom" class="px-2.5 py-1 rounded-xl border-ink-2 text-[10px] font-black bg-white shadow-book-sm">
-                  指定金額模式
-                </button>
-              </div>
-            </div>
-
-            <!-- 均分模式選項 -->
-            <div id="equal-split-box" class="space-y-1.5">
-              <div class="flex justify-between items-center">
-                <span class="text-[10px] text-book-gray">勾選平分成員（自動每人平均分攤）：</span>
-                <button type="button" onclick="toggleSelectAllSplitters()" class="text-[10px] text-book-water underline font-black">全選 / 全消</button>
-              </div>
-              <div id="split-checkboxes-container" class="grid grid-cols-3 gap-1.5 bg-white p-2 rounded-xl border-ink-2">
-                <!-- JS 動態生成均分勾選 -->
-              </div>
-            </div>
-
-            <!-- 指定金額模式選項 -->
-            <div id="custom-split-box" class="hidden space-y-2">
-              <div class="flex justify-between items-center text-[10px] text-book-gray">
-                <span>勾選成員並輸入各自指定分攤金額：</span>
-                <button type="button" onclick="autoFillRemainingCustomAmount()" class="text-[10px] text-book-bamboo underline font-black">將餘額填入勾選者</button>
-              </div>
-              <div id="custom-split-inputs-container" class="space-y-1.5 max-h-48 overflow-y-auto pr-1">
-                <!-- JS 動態生成指定金額輸入列 -->
-              </div>
-
-              <!-- 差額警示與動態提示 -->
-              <div id="custom-split-diff-alert" class="p-2 rounded-xl border-ink-2 text-xs font-black bg-white text-book-ink flex items-center justify-between">
-                <span>分配狀況：</span>
-                <span id="custom-diff-status" class="text-book-coral">請輸入總金額</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Canvas 壓縮縮圖 -->
-          <div>
-            <label class="block text-book-gray text-[11px] mb-1">發票或收據相片 (自動 Canvas 壓縮)</label>
-            <div class="flex items-center gap-2">
-              <label for="exp-file" class="flex-1 cursor-pointer flex items-center justify-center gap-2 py-2 px-3 rounded-xl border-ink-2 border-dashed bg-book-card text-xs font-bold text-book-ink hover:bg-book-yellowLight">
-                <i class="fa-solid fa-camera text-book-coral"></i>
-                <span id="photo-status-text">拍照 / 選擇收據</span>
-              </label>
-              <input type="file" id="exp-file" accept="image/*" class="hidden" onchange="handleReceiptPhoto(event)">
-              
-              <div id="preview-box" class="hidden relative w-10 h-10 rounded-xl border-ink-2 overflow-hidden flex-shrink-0">
-                <img id="preview-img" src="" class="w-full h-full object-cover">
-                <button onclick="clearSelectedPhoto()" class="absolute inset-0 bg-black/40 text-white flex items-center justify-center text-xs">
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <button onclick="saveExpenseRecord()" class="w-full py-2.5 bg-book-coral border-ink-2 rounded-2xl text-white font-black text-xs shadow-book-sm btn-press flex items-center justify-center gap-1">
-            <i class="fa-solid fa-plus"></i> 儲存此筆支出並重新結算
-          </button>
-        </div>
-      </div>
-
-      <!-- 4. 結算與還款建議 -->
-      <div class="bg-book-card border-ink rounded-3xl p-4 shadow-book space-y-3">
-        <div class="flex items-center justify-between">
-          <h3 class="text-sm font-black text-book-ink flex items-center gap-1.5">
-            <i class="fa-solid fa-hand-holding-dollar text-book-bamboo"></i> 分帳結算與還款清單
-          </h3>
-          <button onclick="recalculateSettlement()" class="text-[10px] text-book-gray underline">重新整理</button>
-        </div>
-
-        <div id="settlement-summary-container" class="space-y-1.5">
-          <!-- JS 注入個人淨額 -->
-        </div>
-
-        <div class="pt-2 border-t-2 border-book-ink/10">
-          <div class="text-[11px] font-black text-book-coral mb-1.5"><i class="fa-solid fa-arrow-right-arrow-left mr-1"></i>最優還款建議（誰給誰多少錢）：</div>
-          <div id="debt-transfer-container" class="space-y-1 text-xs font-bold text-book-ink">
-            <!-- JS 注入轉帳建議 -->
-          </div>
-        </div>
-      </div>
-
-      <!-- 5. 記帳列表 -->
-      <div class="space-y-2">
-        <div class="flex items-center justify-between px-1">
-          <h4 class="text-xs font-black text-book-ink">記帳歷史明細</h4>
-          <button onclick="clearAllExpensesPrompt()" class="text-[10px] text-book-coral underline font-bold">清空記帳</button>
-        </div>
-        <div id="expense-records-container" class="space-y-2.5">
-          <!-- JS 渲染支出卡片 -->
-        </div>
-      </div>
-
-    </div>
-
-    <!-- ==================== TAB 4: LISTS (可打勾待辦清單與備忘錄) ==================== -->
+    <!-- ==================== TAB 3: LISTS (可打勾待辦清單與備忘錄) ==================== -->
     <div id="tab-lists" class="tab-content hidden space-y-4">
       
       <!-- 行前準備 CheckList -->
@@ -972,9 +788,9 @@
 
   </main>
 
-  <!-- ==================== FIXED BOTTOM NAVIGATION (底部固定選單) ==================== -->
+  <!-- ==================== FIXED BOTTOM NAVIGATION (底部固定選單 - 4個按鈕) ==================== -->
   <nav class="fixed bottom-0 left-0 right-0 z-50 bg-[#FFFCF6] border-t-ink shadow-[0_-3px_0px_#3E3A39] pb-safe">
-    <div class="max-w-md mx-auto px-3 py-2 flex items-center justify-between gap-1">
+    <div class="max-w-md mx-auto px-3 py-2 flex items-center justify-between gap-1.5">
       <button onclick="switchTab('plan')" id="btn-tab-plan" class="tab-nav-btn flex-1 py-1.5 rounded-2xl border-ink-2 font-black transition text-center bg-book-yellow shadow-book-sm flex flex-col items-center">
         <i class="fa-solid fa-calendar-day text-sm"></i>
         <span class="text-[10px] mt-0.5">行程</span>
@@ -982,10 +798,6 @@
       <button onclick="switchTab('guide')" id="btn-tab-guide" class="tab-nav-btn flex-1 py-1.5 rounded-2xl border-ink-2 font-black transition text-center bg-white shadow-book-sm flex flex-col items-center">
         <i class="fa-solid fa-book-open text-sm"></i>
         <span class="text-[10px] mt-0.5">導覽</span>
-      </button>
-      <button onclick="switchTab('wallet')" id="btn-tab-wallet" class="tab-nav-btn flex-1 py-1.5 rounded-2xl border-ink-2 font-black transition text-center bg-white shadow-book-sm flex flex-col items-center">
-        <i class="fa-solid fa-calculator text-sm"></i>
-        <span class="text-[10px] mt-0.5">記帳分帳</span>
       </button>
       <button onclick="switchTab('lists')" id="btn-tab-lists" class="tab-nav-btn flex-1 py-1.5 rounded-2xl border-ink-2 font-black transition text-center bg-white shadow-book-sm flex flex-col items-center">
         <i class="fa-solid fa-list-check text-sm"></i>
@@ -998,21 +810,6 @@
     </div>
   </nav>
 
-  <!-- ==================== PHOTO MODAL (相片燈箱) ==================== -->
-  <div id="photo-modal" class="fixed inset-0 z-50 bg-black/70 hidden items-center justify-center p-4" onclick="closePhotoModal()">
-    <div class="max-w-sm w-full bg-book-bg border-ink rounded-3xl p-3 shadow-book-lg" onclick="event.stopPropagation()">
-      <div class="flex justify-between items-center mb-2 px-1">
-        <h4 id="photo-modal-caption" class="text-xs font-black text-book-ink">收據相片</h4>
-        <button onclick="closePhotoModal()" class="w-6 h-6 rounded-full bg-white border-ink-2 flex items-center justify-center text-xs">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-      <div class="rounded-2xl border-ink-2 overflow-hidden bg-white max-h-[65vh] flex items-center justify-center">
-        <img id="photo-modal-img" src="" class="w-full h-auto object-contain">
-      </div>
-    </div>
-  </div>
-
   <!-- ==================== TOAST 提示訊息 ==================== -->
   <div id="cute-toast" class="fixed top-14 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-2xl bg-book-ink text-white text-xs font-black shadow-book transition-all duration-300 opacity-0 pointer-events-none transform -translate-y-2">
     提示訊息
@@ -1023,7 +820,6 @@
     /* =========================================================
        1. DATA: 每日時間軸行程 (含明確分類圖示、景點營業時間與退稅說明)
        ========================================================= */
-    // 分類圖示設定對照表
     const CATEGORY_MAP = {
       transport: { name: '交通', icon: 'fa-solid fa-bus-simple', color: 'bg-book-water', textColor: 'text-book-ink' },
       activity: { name: '活動/儀式', icon: 'fa-solid fa-heart', color: 'bg-book-coral', textColor: 'text-white' },
@@ -1040,13 +836,23 @@
         trans: "接駁巴士 (約 2.5 hr)",
         items: [
           {
+            time: "13:15 集合 / 13:30 發車",
+            category: "transport",
+            important: true,
+            isMust: false,
+            title: "第一班接駁巴士集合出發",
+            tag: "專車接送",
+            desc: "集合點：新千歲機場 國際線 2F 到達口 Information 資訊中心櫃檯。<br>負責人：Albee 婷羽。車程約 2.5 小時，車內請勿飲食，請先在機場簡單用餐。",
+            mapQuery: "新千歲機場 國際線 到達口"
+          },
+          {
             time: "15:00 集合 / 15:30 發車",
             category: "transport",
             important: true,
             isMust: false,
             title: "第二班接駁巴士集合出發",
             tag: "專車接送",
-            desc: "集合點：新千歲機場 國際線 2F 到達口 Information 資訊中心櫃檯。<br>負責人：鮑伯 (日文溝通：杰錕)。車程約 2.5 小時。<br><span class='text-book-coral font-black'>※車內請勿飲食，請先在機場簡單用餐</span>",
+            desc: "集合點：新千歲機場 國際線 2F 到達口 Information 資訊中心櫃檯。<br>負責人：鮑伯 (日文溝通：杰錕)。車程約 2.5 小時。車內請勿飲食，請先在機場簡單用餐。",
             mapQuery: "新千歲機場 國際線 到達口"
           },
           {
@@ -1058,16 +864,6 @@
             tag: "飯店入住",
             desc: "專車抵達星野 THE TOWER 後先在車上等候，飯店人員將上車協助辦理 Check-in 並發放房間鑰匙及早餐券，再依序領取大件行李。",
             mapQuery: "星野リゾート トマム ザ・タワー"
-          },
-          {
-            time: "18:30 後",
-            category: "food",
-            important: false,
-            isMust: false,
-            title: "度假村初探索與自費用餐",
-            tag: "休閒漫步",
-            desc: "可搭乘園區巡迴巴士至 Hotalu Street 螢火蟲街品嘗拉麵、甜點或丼飯；亦可漫步雪地欣賞銀白世界夜景。",
-            mapQuery: "Hotalu Street Tomamu"
           },
           {
             time: "18:30 後",
@@ -1178,7 +974,6 @@
             desc: "18:00 親友排隊入場、自由入座用餐；18:30 雙方親家家屬入座包廂。共享北海道名物牛羊豬肉與海陸豐盛百匯料理！",
             mapQuery: "森のレストラン ニニヌプリ"
           }
-          
         ]
       },
       3: {
@@ -1217,14 +1012,46 @@
             mapQuery: "SAPPORO HOTEL by GRANBELL"
           },
           {
-            time: "19:30 - 21:00",
+            time: "19:30 - 21:30",
             category: "food",
             important: false,
             isMust: false,
-            title: "抵達飯店入住・狸小路拉麵與宵夜",
+            title: "抵達飯店入住・札幌市區精選晚餐推薦",
             tag: "市區美食",
-            desc: "辦理入住後，可步行至狸小路商店街或薄野享用札幌道地味噌拉麵、湯咖哩或成吉思汗烤羊肉。",
-            mapQuery: "狸小路商店街"
+            desc: "辦理入住安頓好行李後，推薦徒步前往飯店周遭、狸小路與薄野商圈享受札幌代表性的在地道地美味：",
+            mapQuery: "狸小路商店街",
+            restaurants: [
+              {
+                name: "成吉思汗 達摩 本店 / 5.5店 (Daruma)",
+                hours: "17:00 - 02:00 (宵夜激推)",
+                feature: "炭火厚鑄鐵鍋現烤多汁鮮嫩生羊肉，搭配甘甜洋蔥與獨門秘製沾醬，札幌必吃靈魂美食！",
+                query: "成吉思汗 だるま 5.5店 札幌"
+              },
+              {
+                name: "湯咖哩 Suage+ 本店",
+                hours: "11:30 - 21:30",
+                feature: "備長炭炭燒串烤北海道知床雞腿，湯頭鮮甜溫潤帶有辛香層次，排隊神級湯咖哩。",
+                query: "Soup Curry Suage+ 本店"
+              },
+              {
+                name: "札幌拉麵 一粒庵 (Ichian)",
+                hours: "11:00 - 15:00, 17:00 - 20:30",
+                feature: "米其林指南推薦！道地熟成濃厚行者大蒜味噌拉麵，搭配如雲朵般滑嫩的炒蛋，暖呼呼超享受。",
+                query: "ラーメン 札幌 一粒庵"
+              },
+              {
+                name: "二條市場 大磯 (Ohiso)",
+                hours: "07:00 - 20:00 (近 GRANBELL)",
+                feature: "步行即達二條市場！澎湃生海膽、晶瑩剔透鮭魚卵與帝王蟹肉三色海鮮丼，海味鮮甜極致。",
+                query: "二条市場 大磯 札幌"
+              },
+              {
+                name: "根室花丸 迴轉壽司 (JR Tower Stellar Place店)",
+                hours: "11:00 - 22:00 (建議先抽號碼牌)",
+                feature: "道東根室漁港直送！厚切超大生干貝、油花豐富油鰈魚緣側，新鮮平價CP值爆表。",
+                query: "回転寿司 根室花まる JRタワーステラプレイス店"
+              }
+            ]
           }
         ]
       },
@@ -1247,7 +1074,7 @@
             time: "10:00 - 10:45",
             category: "spot",
             important: false,
-            isMust: false,
+            isMust: true,
             title: "小樽運河遊船 (Otaru Canal Cruise)",
             tag: "必去景點",
             desc: "<strong>營業時間：10:00 - 16:00 (夜航至 20:00)</strong><br>可選擇搭乘復古遊船穿梭中央橋至小樽港，從水面仰望石造倉庫與冬日雪景的絕佳視角。",
@@ -1264,67 +1091,109 @@
             mapQuery: "小樽藝術村 花窗玻璃美術館"
           },
           {
-            time: "12:00 - 13:15",
+            time: "12:00 - 13:30",
             category: "food",
             important: false,
             isMust: false,
-            title: "午餐時光・小樽海鮮丼美饌 (參考推薦)",
-            tag: "美食推薦",
-            desc: "自由品嘗小樽極上海鮮！<br>推薦店家參考：<br>① <strong>ポセイ丼 丼兵衛小樽運河店</strong> (近運河、食材豐富)<br>② <strong>ヤマジョウ安田商店</strong> (在地海產行直送、新鮮平價)<br>③ <strong>小樽海鮮丼 吉</strong> (人氣海膽與鮭魚卵丼飯)。",
-            mapQuery: "ポセイ丼 丼兵衛"
+            title: "小樽午餐・在地必吃名物餐廳推薦",
+            tag: "午餐推薦",
+            desc: "小樽是海鮮與傳統炸物的殿堂，以下精心整理高評價午餐名店，大家可自由挑選品嘗：",
+            mapQuery: "小樽運河 美食",
+            restaurants: [
+              {
+                name: "ポセイ丼 丼兵衛 小樽運河店",
+                hours: "11:00 - 18:00",
+                feature: "運河正前方！超人氣平價爆量海鮮丼與現烤帶殼大扇貝，食材新鮮份量十足。",
+                query: "ポセイ丼 丼兵衛 小樽運河店"
+              },
+              {
+                name: "ヤマジョウ安田商店 (Yasuda Shoten)",
+                hours: "09:00 - 16:00",
+                feature: "在地百年水產老舖直營！現烤厚實帝王蟹腳、飽滿海膽與生干貝鮭魚卵丼，價格極親民。",
+                query: "ヤマジョウ安田商店 小樽"
+              },
+              {
+                name: "小樽海鮮丼 吉 (Yoshi)",
+                hours: "10:00 - 16:00",
+                feature: "隱身運河周邊的高評價海鮮丼！炭烤大蝦、極上無明礬海膽入口即化，口感純粹鮮甜。",
+                query: "小樽海鮮丼 吉"
+              },
+              {
+                name: "壽司通 政壽司 本店 (Otaru Masazushi)",
+                hours: "11:00 - 15:00, 17:00 - 21:00",
+                feature: "小樽70年壽司名門！壽司通首屈一指老字號，老饕指定職人現捏頂級手握壽司料理。",
+                query: "おたる政寿司 本店"
+              },
+              {
+                name: "若雞時代 なると 本店 (Naruto)",
+                hours: "11:00 - 20:30",
+                feature: "小樽靈魂鄉土美食！外皮炸至金黃薄脆、肉汁滾燙噴香的招牌炸半雞與平價壽司定食。",
+                query: "若鶏時代 なると 本店 小樽"
+              }
+            ]
           },
           {
-            time: "自行規劃",
+            time: "午後散策・甜點與下午茶",
+            category: "food",
+            important: false,
+            isMust: false,
+            title: "堺町通午後甜點時光・知名名店推薦",
+            tag: "下午茶推薦",
+            desc: "漫步在石造歷史街道中，別錯過小樽最負盛名的浪漫下午茶與伴手禮：",
+            mapQuery: "小樽 堺町通り 甜點",
+            restaurants: [
+              {
+                name: "LeTAO 小樽總店 2F 咖啡廳",
+                hours: "09:00 - 18:00 (L.O. 17:30)",
+                feature: "品嘗最經典的原味雙層乳酪蛋糕與季節限定調味紅茶套餐，頂樓更能俯瞰童話十字路口！",
+                query: "小樽洋菓子舗ルタオ 本店"
+              },
+              {
+                name: "北一硝子三號館 北一Hall (星巴特咖啡廳)",
+                hours: "10:00 - 17:30",
+                feature: "百年木造倉庫內完全不用電燈，在167盞搖曳煤油瓦斯燈光下，享用超大特製奶油泡芙與現煮咖啡。",
+                query: "北一ホール 小樽"
+              },
+              {
+                name: "銀之鐘 1 號館 (銀の鐘1号館)",
+                hours: "10:00 - 17:30",
+                feature: "經典紀念名店！點選熱咖啡冷飲即贈送精緻陶瓷咖啡杯，喝完清洗後可帶回家當旅行紀念品。",
+                query: "銀の鐘 1号館 小樽"
+              }
+            ]
+          },
+          {
+            time: "午後自由活動 (時間不限)",
             category: "spot",
             important: false,
             isMust: false,
             title: "小樽出拔小路",
-            tag: "歷史街道",
+            tag: "美食商場",
             desc: "<strong>營業時間：11:00 - 21:00 (依各店家為準)</strong><br>重現大正與昭和風情的美食小巷，擁有地標「火警望樓」，可免費登頂俯瞰小樽運河與十字路口雪景。",
             mapQuery: "小樽出拔小路"
           },
           {
-            time: "自行規劃",
+            time: "(時間不限)",
             category: "spot",
             important: false,
             isMust: false,
-            title: "堺町通商店街",
+            title: "堺町通商店街散策",
             tag: "歷史街道",
             desc: "<strong>店家營業時間：約 09:00 - 18:00</strong><br>兩旁林立保留完好的百年石造洋館與倉庫，匯集各大玻璃工藝館、伴手禮店與特色咖啡館，漫步氣氛極佳。",
             mapQuery: "堺町通り商店街"
           },
           {
-            time: "自行規劃",
+            time: " (時間不限)",
             category: "shopping",
             important: false,
             isMust: false,
             title: "ちいかわ もぐもぐ本舗 小樽店",
-            tag: "自行規劃",
+            tag: "人氣萌店",
             desc: "<strong>營業時間：09:30 - 17:30</strong><br>吉伊卡哇粉絲必訪！以復古懷舊點心雜貨為主題，販售小樽限定吊飾、點心盒與限定周邊雜貨。",
             mapQuery: "ちいかわもぐもぐ本舗小樽店"
           },
           {
-            time: "自行規劃",
-            category: "food",
-            important: false,
-            isMust: false,
-            title: "LeTAO 小樽總店 (ルタオ本店)",
-            tag: "名產甜點",
-            desc: "<strong>營業時間：09:00 - 18:00 (咖啡廳 L.O. 17:30)</strong><br>品嘗最經典的原味雙層乳酪蛋糕 (Double Fromage) 與限定紅茶，頂樓展望台更可俯瞰童話十字路口。",
-            mapQuery: "LeTAO 小樽總店"
-          },
-          {
-            time: "自行規劃",
-            category: "food",
-            important: false,
-            isMust: false,
-            title: "銀之鐘 1 號館 (銀の鐘1号館)",
-            tag: "紀念咖啡",
-            desc: "<strong>營業時間：10:00 - 17:30</strong><br>經典特色：點選咖啡冷飲即贈送精巧陶瓷咖啡杯，喝完清洗後可帶回家當紀念品！",
-            mapQuery: "銀之鐘1號館"
-          },
-          {
-            time: "自行規劃",
+            time: "(時間不限)",
             category: "spot",
             important: false,
             isMust: false,
@@ -1548,8 +1417,43 @@
               ${item.desc}
             </div>
 
+            <!-- 若有附屬精選餐廳清單 (D1, D3, D4) 渲染獨立美觀卡片 -->
+            ${item.restaurants && item.restaurants.length > 0 ? `
+              <div class="mt-3 pt-2.5 border-t-2 border-book-ink/10 space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-black text-book-coral flex items-center gap-1">
+                    <i class="fa-solid fa-utensils"></i> 在地推薦餐廳列表 (${item.restaurants.length} 間)
+                  </span>
+                  <span class="text-[9px] text-book-gray font-bold">點選可直接導航</span>
+                </div>
+                
+                <div class="space-y-2">
+                  ${item.restaurants.map(rest => `
+                    <div class="bg-book-card border-ink-2 rounded-2xl p-2.5 shadow-book-sm space-y-1">
+                      <div class="flex items-start justify-between gap-1.5">
+                        <span class="text-xs font-black text-book-ink leading-tight">${rest.name}</span>
+                        <span class="text-[9px] font-black bg-book-yellowLight text-book-ink border-ink-2 px-1.5 py-0.5 rounded-lg flex-shrink-0">
+                          <i class="fa-regular fa-clock mr-0.5"></i>${rest.hours}
+                        </span>
+                      </div>
+                      <p class="text-[10px] font-bold text-book-ink/85 leading-relaxed">
+                        ${rest.feature}
+                      </p>
+                      <div class="pt-1 flex justify-end">
+                        <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(rest.query || rest.name)}" target="_blank" class="inline-flex items-center gap-1 px-2.5 py-0.5 bg-white hover:bg-book-yellow border-ink-2 rounded-xl text-[10px] font-black shadow-book-sm btn-press">
+                          <i class="fa-solid fa-location-dot text-book-coral text-[9px]"></i>
+                          <span>開啟地圖</span>
+                          <i class="fa-solid fa-arrow-up-right-from-square text-[8px] text-book-gray"></i>
+                        </a>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+
             <div class="mt-2.5 pt-2 border-t-2 border-book-ink/10 flex items-center justify-between">
-              <span class="text-[10px] text-book-gray font-bold">點選開啟定位</span>
+              <span class="text-[10px] text-book-gray font-bold">主要定位</span>
               <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.mapQuery)}" target="_blank" class="inline-flex items-center gap-1 px-3 py-1 bg-book-card hover:bg-book-yellow border-ink-2 rounded-xl text-[11px] font-black shadow-book-sm btn-press">
                 <i class="fa-solid fa-location-dot text-book-coral"></i>
                 <span>開啟 Google Maps</span>
@@ -1581,654 +1485,7 @@
     }
 
     /* =========================================================
-       3. WALLET: 算式計算機 + 分帳成員管理 + 債務最優結算
-       ========================================================= */
-    let customRate = 0.215;
-    let receiptBase64 = null;
-    // 預設成員依照家族成員填寫
-    const DEFAULT_MEMBERS = ['秉原', '佑珊', '雅琪', '芷涵', '雅玲', '秉輝', '婷婷','秀川'];
-
-    function initRate() {
-      const saved = localStorage.getItem('hokkaido_rate');
-      if (saved) {
-        customRate = parseFloat(saved);
-        const input = document.getElementById('rate-val');
-        if (input) input.value = customRate;
-      }
-    }
-
-    function updateCustomRate() {
-      const input = document.getElementById('rate-val');
-      const val = parseFloat(input.value);
-      if (!isNaN(val) && val > 0) {
-        customRate = val;
-        localStorage.setItem('hokkaido_rate', customRate);
-        calculateExpression();
-        renderExpenses();
-        recalculateSettlement();
-        showCuteToast('已更新匯率為 ' + customRate);
-      }
-    }
-
-    function calculateExpression() {
-      const input = document.getElementById('calc-input');
-      const out = document.getElementById('calc-result');
-      const expr = input.value.trim();
-      if (!expr) {
-        out.innerText = 'NT$ 0';
-        return;
-      }
-
-      const sanitized = expr.replace(/[^0-9+\-*/().]/g, '');
-      try {
-        const jpy = Function('"use strict"; return (' + sanitized + ')')();
-        if (typeof jpy === 'number' && !isNaN(jpy)) {
-          const twd = Math.round(jpy * customRate);
-          out.innerText = `NT$ ${twd.toLocaleString()} (¥${Math.round(jpy).toLocaleString()})`;
-        } else {
-          out.innerText = '算式錯誤';
-        }
-      } catch (e) {
-        out.innerText = '格式不正確';
-      }
-    }
-
-    /* 分帳成員系統 (LocalStorage) */
-    let currentSplitMode = 'equal'; // 'equal' | 'custom'
-
-    function setSplitMode(mode) {
-      currentSplitMode = mode;
-      const btnEqual = document.getElementById('btn-mode-equal');
-      const btnCustom = document.getElementById('btn-mode-custom');
-      const boxEqual = document.getElementById('equal-split-box');
-      const boxCustom = document.getElementById('custom-split-box');
-
-      if (mode === 'equal') {
-        btnEqual.classList.replace('bg-white', 'bg-book-yellow');
-        btnCustom.classList.replace('bg-book-yellow', 'bg-white');
-        boxEqual.classList.remove('hidden');
-        boxCustom.classList.add('hidden');
-      } else {
-        btnCustom.classList.replace('bg-white', 'bg-book-yellow');
-        btnEqual.classList.replace('bg-book-yellow', 'bg-white');
-        boxCustom.classList.remove('hidden');
-        boxEqual.classList.add('hidden');
-        checkCustomSplitBalance();
-      }
-    }
-
-    function handleTotalAmountChange() {
-      if (currentSplitMode === 'custom') {
-        checkCustomSplitBalance();
-      }
-    }
-
-    function checkCustomSplitBalance() {
-      const totalAmt = parseFloat(document.getElementById('exp-amount').value) || 0;
-      const statusEl = document.getElementById('custom-diff-status');
-      const alertBox = document.getElementById('custom-split-diff-alert');
-      if (!statusEl || !alertBox) return { isValid: false, diff: 0, totalAmt, allocated: 0 };
-
-      const members = getMembers();
-      let allocated = 0;
-
-      members.forEach(m => {
-        const cb = document.getElementById(`custom-chk-${m}`);
-        const input = document.getElementById(`custom-val-${m}`);
-        if (cb && cb.checked && input) {
-          const val = parseFloat(input.value) || 0;
-          allocated += val;
-        }
-      });
-
-      const diff = Math.round(totalAmt - allocated);
-
-      if (totalAmt <= 0) {
-        statusEl.innerHTML = `<span class="text-book-gray">請先在上方輸入總金額</span>`;
-        alertBox.className = "p-2 rounded-xl border-ink-2 text-xs font-black bg-white text-book-ink flex items-center justify-between";
-        return { isValid: false, diff: 0, totalAmt, allocated };
-      }
-
-      if (diff === 0) {
-        statusEl.innerHTML = `<span class="text-book-bamboo">✓ 金額完全吻合 (合計 ¥${allocated.toLocaleString()})</span>`;
-        alertBox.className = "p-2 rounded-xl border-ink-2 text-xs font-black bg-book-bambooLight text-book-ink flex items-center justify-between";
-        return { isValid: true, diff: 0, totalAmt, allocated };
-      } else if (diff > 0) {
-        statusEl.innerHTML = `<span class="text-book-coral animate-pulse">⚠️ 尚餘 ¥${diff.toLocaleString()} 未分配 (已配 ¥${allocated.toLocaleString()} / 總 ¥${totalAmt.toLocaleString()})</span>`;
-        alertBox.className = "p-2 rounded-xl border-ink-2 text-xs font-black bg-book-coralLight text-book-ink flex items-center justify-between";
-        return { isValid: false, diff, totalAmt, allocated };
-      } else {
-        const over = Math.abs(diff);
-        statusEl.innerHTML = `<span class="text-book-coral animate-pulse">⚠️ 已超額分配 ¥${over.toLocaleString()} (已配 ¥${allocated.toLocaleString()} / 總 ¥${totalAmt.toLocaleString()})</span>`;
-        alertBox.className = "p-2 rounded-xl border-ink-2 text-xs font-black bg-book-coralLight text-book-ink flex items-center justify-between";
-        return { isValid: false, diff, totalAmt, allocated };
-      }
-    }
-
-    function handleCustomCheckboxToggle(member) {
-      const cb = document.getElementById(`custom-chk-${member}`);
-      const input = document.getElementById(`custom-val-${member}`);
-      if (cb && input) {
-        input.disabled = !cb.checked;
-        if (!cb.checked) {
-          input.value = '';
-        }
-      }
-      checkCustomSplitBalance();
-    }
-
-    function autoFillRemainingCustomAmount() {
-      const totalAmt = parseFloat(document.getElementById('exp-amount').value) || 0;
-      if (totalAmt <= 0) {
-        showCuteToast('請先輸入日幣總金額');
-        return;
-      }
-
-      const members = getMembers();
-      let checkedMembers = [];
-      let currentAllocated = 0;
-
-      members.forEach(m => {
-        const cb = document.getElementById(`custom-chk-${m}`);
-        const input = document.getElementById(`custom-val-${m}`);
-        if (cb && cb.checked) {
-          checkedMembers.push(m);
-          currentAllocated += (parseFloat(input.value) || 0);
-        }
-      });
-
-      if (checkedMembers.length === 0) {
-        showCuteToast('請先勾選要參與分攤的成員');
-        return;
-      }
-
-      const emptyMembers = checkedMembers.filter(m => {
-        const input = document.getElementById(`custom-val-${m}`);
-        return !input.value || parseFloat(input.value) === 0;
-      });
-
-      const remaining = totalAmt - (currentAllocated - emptyMembers.reduce((sum, m) => sum + (parseFloat(document.getElementById(`custom-val-${m}`).value) || 0), 0));
-
-      if (remaining <= 0) {
-        showCuteToast('目前已無剩餘金額可分配');
-        return;
-      }
-
-      const targets = emptyMembers.length > 0 ? emptyMembers : checkedMembers;
-      const perAmt = Math.floor(remaining / targets.length);
-      let rest = remaining - (perAmt * targets.length);
-
-      targets.forEach((m, idx) => {
-        const input = document.getElementById(`custom-val-${m}`);
-        const finalVal = perAmt + (idx === 0 ? rest : 0);
-        input.value = finalVal;
-      });
-
-      checkCustomSplitBalance();
-      showCuteToast('已自動分配剩餘金額');
-    }
-
-    function getMembers() {
-      try {
-        const data = localStorage.getItem('hokkaido_members');
-        return data ? JSON.parse(data) : DEFAULT_MEMBERS;
-      } catch (e) {
-        return DEFAULT_MEMBERS;
-      }
-    }
-
-    function saveMembers(arr) {
-      localStorage.setItem('hokkaido_members', JSON.stringify(arr));
-      renderMemberElements();
-    }
-
-    function addNewMember() {
-      const input = document.getElementById('new-member-name');
-      const name = input.value.trim();
-      if (!name) return;
-      const list = getMembers();
-      if (list.includes(name)) {
-        showCuteToast('成員已存在');
-        return;
-      }
-      list.push(name);
-      saveMembers(list);
-      input.value = '';
-      showCuteToast(`已新增成員：${name}`);
-    }
-
-    function removeMember(name) {
-      let list = getMembers();
-      if (list.length <= 1) {
-        showCuteToast('至少需保留一位成員');
-        return;
-      }
-      list = list.filter(m => m !== name);
-      saveMembers(list);
-      showCuteToast(`已移除成員：${name}`);
-    }
-
-    function renderMemberElements() {
-      const members = getMembers();
-      
-      const tagsContainer = document.getElementById('members-tags-container');
-      if (tagsContainer) {
-        tagsContainer.innerHTML = members.map(m => `
-          <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-white border-ink-2 rounded-xl text-xs font-black shadow-book-sm">
-            <span>${m}</span>
-            <button onclick="removeMember('${m}')" class="text-book-coral hover:text-red-600 ml-0.5">
-              <i class="fa-solid fa-xmark text-[10px]"></i>
-            </button>
-          </span>
-        `).join('');
-      }
-
-      const payerSelect = document.getElementById('exp-payer');
-      if (payerSelect) {
-        payerSelect.innerHTML = members.map(m => `<option value="${m}">${m} (先墊款)</option>`).join('');
-      }
-
-      // 均分勾選
-      const splitContainer = document.getElementById('split-checkboxes-container');
-      if (splitContainer) {
-        splitContainer.innerHTML = members.map(m => `
-          <label class="flex items-center gap-1.5 p-1 text-[11px] font-black cursor-pointer">
-            <input type="checkbox" name="split_person" value="${m}" checked class="rounded border-ink-2 accent-book-coral w-3.5 h-3.5">
-            <span class="truncate">${m}</span>
-          </label>
-        `).join('');
-      }
-
-      // 自訂金額清單
-      const customContainer = document.getElementById('custom-split-inputs-container');
-      if (customContainer) {
-        customContainer.innerHTML = members.map(m => `
-          <div class="flex items-center gap-2 p-1.5 bg-white border-ink-2 rounded-xl">
-            <label class="flex items-center gap-1.5 w-24 flex-shrink-0 cursor-pointer">
-              <input type="checkbox" id="custom-chk-${m}" checked onchange="handleCustomCheckboxToggle('${m}')" class="rounded border-ink-2 accent-book-coral w-3.5 h-3.5">
-              <span class="text-xs font-black text-book-ink truncate">${m}</span>
-            </label>
-            <div class="flex-1 flex items-center gap-1">
-              <span class="text-xs text-book-gray font-bold">¥</span>
-              <input type="number" id="custom-val-${m}" placeholder="0" oninput="checkCustomSplitBalance()" class="w-full px-2 py-1 bg-book-card border-ink-2 rounded-lg text-xs font-black text-book-ink focus:outline-none">
-            </div>
-          </div>
-        `).join('');
-      }
-
-      checkCustomSplitBalance();
-    }
-
-    function toggleSelectAllSplitters() {
-      const boxes = document.querySelectorAll('input[name="split_person"]');
-      const allChecked = Array.from(boxes).every(b => b.checked);
-      boxes.forEach(b => b.checked = !allChecked);
-    }
-
-    /* 圖片上傳與 Canvas 壓縮 */
-    function handleReceiptPhoto(e) {
-      const file = e.target.files[0];
-      if (!file) return;
-
-      const reader = new FileReader();
-      reader.onload = function(event) {
-        const img = new Image();
-        img.onload = function() {
-          const canvas = document.createElement('canvas');
-          let w = img.width;
-          let h = img.height;
-          const maxDim = 420;
-          if (w > h && w > maxDim) {
-            h = Math.round((h * maxDim) / w);
-            w = maxDim;
-          } else if (h > maxDim) {
-            w = Math.round((w * maxDim) / h);
-            h = maxDim;
-          }
-          canvas.width = w;
-          canvas.height = h;
-          const ctx = canvas.getContext('2d');
-          ctx.drawImage(img, 0, 0, w, h);
-          receiptBase64 = canvas.toDataURL('image/jpeg', 0.6);
-
-          document.getElementById('preview-img').src = receiptBase64;
-          document.getElementById('preview-box').classList.remove('hidden');
-          document.getElementById('photo-status-text').innerText = '收據已附加';
-        };
-        img.src = event.target.result;
-      };
-      reader.readAsDataURL(file);
-    }
-
-    function clearSelectedPhoto() {
-      receiptBase64 = null;
-      document.getElementById('exp-file').value = '';
-      document.getElementById('preview-box').classList.add('hidden');
-      document.getElementById('photo-status-text').innerText = '拍照 / 選擇收據';
-    }
-
-    /* 記帳記錄 LocalStorage */
-    function getExpenses() {
-      try {
-        const d = localStorage.getItem('hokkaido_expenses');
-        return d ? JSON.parse(d) : [];
-      } catch (e) {
-        return [];
-      }
-    }
-
-    function saveExpenseRecord() {
-      const title = document.getElementById('exp-title').value.trim();
-      const amount = parseFloat(document.getElementById('exp-amount').value);
-      const payer = document.getElementById('exp-payer').value;
-
-      if (!title) {
-        showCuteToast('請輸入消費項目名稱');
-        return;
-      }
-      if (isNaN(amount) || amount <= 0) {
-        showCuteToast('請輸入正確日幣總金額');
-        return;
-      }
-
-      let splitMode = currentSplitMode;
-      let splitShares = {}; // { '成員名': 金額 }
-      let splitters = [];
-
-      if (splitMode === 'equal') {
-        const splitCheckboxes = document.querySelectorAll('input[name="split_person"]:checked');
-        splitters = Array.from(splitCheckboxes).map(cb => cb.value);
-
-        if (splitters.length === 0) {
-          showCuteToast('至少需要勾選一位平分對象');
-          return;
-        }
-
-        const perPerson = Math.floor(amount / splitters.length);
-        const remainder = amount - (perPerson * splitters.length);
-        splitters.forEach((m, idx) => {
-          splitShares[m] = perPerson + (idx === 0 ? remainder : 0);
-        });
-      } else {
-        // 自訂金額模式
-        const balanceCheck = checkCustomSplitBalance();
-        if (!balanceCheck.isValid) {
-          if (balanceCheck.diff > 0) {
-            showCuteToast(`⚠️ 尚有 ¥${balanceCheck.diff.toLocaleString()} 未分配，請檢查金額`);
-          } else {
-            showCuteToast(`⚠️ 已超額分配 ¥${Math.abs(balanceCheck.diff).toLocaleString()}，請檢查金額`);
-          }
-          return;
-        }
-
-        const members = getMembers();
-        members.forEach(m => {
-          const cb = document.getElementById(`custom-chk-${m}`);
-          const input = document.getElementById(`custom-val-${m}`);
-          if (cb && cb.checked && input) {
-            const val = parseFloat(input.value) || 0;
-            if (val > 0) {
-              splitShares[m] = val;
-              splitters.push(m);
-            }
-          }
-        });
-
-        if (splitters.length === 0) {
-          showCuteToast('至少需輸入一位分攤成員的金額');
-          return;
-        }
-      }
-
-      const newRecord = {
-        id: Date.now(),
-        title: title,
-        amountJPY: amount,
-        payer: payer,
-        splitMode: splitMode,
-        splitters: splitters,
-        splitShares: splitShares,
-        photo: receiptBase64,
-        date: new Date().toLocaleDateString('zh-TW', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })
-      };
-
-      const list = getExpenses();
-      list.unshift(newRecord);
-      localStorage.setItem('hokkaido_expenses', JSON.stringify(list));
-
-      document.getElementById('exp-title').value = '';
-      document.getElementById('exp-amount').value = '';
-      clearSelectedPhoto();
-      
-      // 清空自訂輸入
-      getMembers().forEach(m => {
-        const input = document.getElementById(`custom-val-${m}`);
-        if (input) input.value = '';
-      });
-      checkCustomSplitBalance();
-
-      renderExpenses();
-      recalculateSettlement();
-      showCuteToast('記帳成功！分帳已即時更新');
-    }
-
-    function deleteExpense(id) {
-      let list = getExpenses();
-      list = list.filter(item => item.id !== id);
-      localStorage.setItem('hokkaido_expenses', JSON.stringify(list));
-      renderExpenses();
-      recalculateSettlement();
-      showCuteToast('已刪除此筆記帳');
-    }
-
-    let confirmClearExpense = false;
-    function clearAllExpensesPrompt() {
-      if (!confirmClearExpense) {
-        confirmClearExpense = true;
-        showCuteToast('再按一次「清空記帳」確定刪除所有資料');
-        setTimeout(() => { confirmClearExpense = false; }, 3500);
-        return;
-      }
-      confirmClearExpense = false;
-      localStorage.removeItem('hokkaido_expenses');
-      renderExpenses();
-      recalculateSettlement();
-      showCuteToast('所有記帳已清空');
-    }
-
-    function renderExpenses() {
-      const list = getExpenses();
-      const container = document.getElementById('expense-records-container');
-      if (!container) return;
-
-      if (list.length === 0) {
-        container.innerHTML = `
-          <div class="text-center py-6 text-book-gray text-xs bg-white border-ink rounded-3xl">
-            <i class="fa-solid fa-receipt text-2xl text-book-gray/30 mb-1"></i>
-            <div>尚無記帳紀錄，在上方輸入第一筆支出</div>
-          </div>
-        `;
-        return;
-      }
-
-      const allMembersCount = getMembers().length;
-
-      container.innerHTML = list.map(item => {
-        const twd = Math.round(item.amountJPY * customRate);
-        const isCustom = item.splitMode === 'custom';
-        
-        let splitDetailText = '';
-        if (isCustom && item.splitShares) {
-          const detailList = Object.entries(item.splitShares).map(([m, amt]) => `${m}: ¥${amt.toLocaleString()}`).join(', ');
-          splitDetailText = `<span class="text-book-coral font-bold">[自訂] ${detailList}</span>`;
-        } else {
-          const splitText = item.splitters.length === allMembersCount ? '全員平分' : `${item.splitters.length} 人平分 (${item.splitters.join(',')})`;
-          splitDetailText = `<span>分：${splitText}</span>`;
-        }
-
-        return `
-          <div class="bg-white border-ink rounded-3xl p-3 shadow-book flex items-center justify-between gap-2.5">
-            <div class="flex items-center gap-2 overflow-hidden">
-              ${item.photo ? `
-                <img src="${item.photo}" onclick="openPhotoModal('${item.title}', '${item.photo}')" class="w-11 h-11 rounded-xl border-ink-2 object-cover cursor-pointer flex-shrink-0" alt="收據">
-              ` : `
-                <div class="w-11 h-11 rounded-xl bg-book-card border-ink-2 flex items-center justify-center text-xs text-book-coral flex-shrink-0">
-                  <i class="fa-solid fa-tag"></i>
-                </div>
-              `}
-              <div class="overflow-hidden">
-                <div class="text-xs font-black text-book-ink truncate flex items-center gap-1">
-                  <span>${item.title}</span>
-                  ${isCustom ? '<span class="text-[9px] bg-book-coral text-white px-1.5 py-0.2 rounded-md font-black border-ink-2">指定分帳</span>' : '<span class="text-[9px] bg-book-yellow text-book-ink px-1.5 py-0.2 rounded-md font-black border-ink-2">均分</span>'}
-                </div>
-                <div class="text-[10px] text-book-gray font-bold mt-0.5 truncate">
-                  <span class="text-book-coral">付：${item.payer}</span> ｜ ${splitDetailText}
-                </div>
-              </div>
-            </div>
-
-            <div class="text-right flex-shrink-0 flex items-center gap-2">
-              <div>
-                <div class="text-xs font-black text-book-ink">¥ ${item.amountJPY.toLocaleString()}</div>
-                <div class="text-[10px] text-book-coral font-bold">NT$ ${twd.toLocaleString()}</div>
-              </div>
-              <button onclick="deleteExpense(${item.id})" class="text-book-gray hover:text-book-coral p-1 text-xs">
-                <i class="fa-solid fa-trash-can"></i>
-              </button>
-            </div>
-          </div>
-        `;
-      }).join('');
-    }
-
-    /* 分帳最佳化演算法 (全面相容指定分帳與均分) */
-    function recalculateSettlement() {
-      const expenses = getExpenses();
-      const members = getMembers();
-      const summaryContainer = document.getElementById('settlement-summary-container');
-      const debtContainer = document.getElementById('debt-transfer-container');
-
-      if (!summaryContainer || !debtContainer) return;
-
-      const balances = {};
-      members.forEach(m => {
-        balances[m] = 0;
-      });
-
-      expenses.forEach(item => {
-        const amt = item.amountJPY;
-        const payer = item.payer;
-
-        // 代墊人先加上總額
-        if (balances[payer] !== undefined) {
-          balances[payer] += amt;
-        }
-
-        // 依據是否為指定金額分攤扣除
-        if (item.splitShares && Object.keys(item.splitShares).length > 0) {
-          Object.entries(item.splitShares).forEach(([person, shareAmt]) => {
-            if (balances[person] !== undefined) {
-              balances[person] -= shareAmt;
-            }
-          });
-        } else {
-          // 向後相容舊有平均分攤資料
-          const splitters = item.splitters && item.splitters.length > 0 ? item.splitters : [payer];
-          const perPerson = amt / splitters.length;
-          splitters.forEach(s => {
-            if (balances[s] !== undefined) {
-              balances[s] -= perPerson;
-            }
-          });
-        }
-      });
-
-      summaryContainer.innerHTML = members.map(m => {
-        const bal = Math.round(balances[m]);
-        const balTwd = Math.round(bal * customRate);
-        const isPlus = bal > 0;
-        const isMinus = bal < 0;
-        const badgeColor = isPlus ? 'text-book-bamboo' : (isMinus ? 'text-book-coral' : 'text-book-gray');
-        const badgeText = isPlus ? `應收 ¥${bal.toLocaleString()} (約 NT$ ${balTwd.toLocaleString()})` : (isMinus ? `應付 ¥${Math.abs(bal).toLocaleString()} (約 NT$ ${Math.abs(balTwd).toLocaleString()})` : '已結清');
-
-        return `
-          <div class="flex items-center justify-between text-xs font-bold bg-white p-2 rounded-xl border-ink-2">
-            <span class="font-black text-book-ink">${m}</span>
-            <span class="text-[11px] ${badgeColor} font-black">${badgeText}</span>
-          </div>
-        `;
-      }).join('');
-
-      let debtors = [];
-      let creditors = [];
-
-      members.forEach(m => {
-        const bal = Math.round(balances[m]);
-        if (bal < -1) debtors.push({ name: m, amount: -bal });
-        if (bal > 1) creditors.push({ name: m, amount: bal });
-      });
-
-      debtors.sort((a, b) => b.amount - a.amount);
-      creditors.sort((a, b) => b.amount - a.amount);
-
-      let transfers = [];
-      let i = 0;
-      let j = 0;
-
-      while (i < debtors.length && j < creditors.length) {
-        const payAmt = Math.min(debtors[i].amount, creditors[j].amount);
-        if (payAmt > 0) {
-          const payTwd = Math.round(payAmt * customRate);
-          transfers.push({
-            from: debtors[i].name,
-            to: creditors[j].name,
-            jpy: Math.round(payAmt),
-            twd: payTwd
-          });
-        }
-
-        debtors[i].amount -= payAmt;
-        creditors[j].amount -= payAmt;
-
-        if (debtors[i].amount <= 1) i++;
-        if (creditors[j].amount <= 1) j++;
-      }
-
-      if (transfers.length === 0) {
-        debtContainer.innerHTML = `<div class="p-2 bg-white rounded-xl border-ink-2 text-center text-book-gray text-[11px]">太好了！目前大家代墊款項均已結清 🎉</div>`;
-      } else {
-        debtContainer.innerHTML = transfers.map(t => `
-          <div class="p-2 bg-white rounded-xl border-ink-2 flex items-center justify-between">
-            <div class="flex items-center gap-1.5">
-              <span class="font-black text-book-coral">${t.from}</span>
-              <span class="text-book-gray text-[10px]">應付款給</span>
-              <span class="font-black text-book-bamboo">${t.to}</span>
-            </div>
-            <div class="text-right">
-              <span class="font-black text-xs text-book-ink">¥ ${t.jpy.toLocaleString()}</span>
-              <span class="text-[10px] text-book-coral font-bold block">NT$ ${t.twd.toLocaleString()}</span>
-            </div>
-          </div>
-        `).join('');
-      }
-    }
-
-    function openPhotoModal(title, base64) {
-      document.getElementById('photo-modal-caption').innerText = title || '收據相片';
-      document.getElementById('photo-modal-img').src = base64;
-      const modal = document.getElementById('photo-modal');
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-    }
-
-    function closePhotoModal() {
-      const modal = document.getElementById('photo-modal');
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-    }
-
-    /* =========================================================
-       4. LISTS: 行前 CheckList & 智慧備忘錄
+       3. LISTS: 行前 CheckList & 智慧備忘錄
        ========================================================= */
     const PACKING_CONFIG = [
       {
@@ -2238,28 +1495,28 @@
           { id: "p_vjw", text: "填妥 Visit Japan Web (入境 QR Code 截圖)" },
           { id: "p_sim", text: "日本 eSIM 或上網漫遊卡" },
           { id: "p_cash", text: "日幣現金 & 高海外回饋信用卡" },
-          { id: "p_power", text: "行動電源 (依規定需隨身攜帶不可託運)" }
+          { id: "p_power", text: "行動電源 (依規定需隨身攜帶不可託運)" },
+          { id: "p_suit", text: "婚禮正裝 (西裝/領帶/深色皮鞋/優雅套裝)" }
         ]
       },
       {
-        cat: "衣著打扮",
+        cat: "戶外防風雪 & 防滑穿著",
         items: [
-          { id: "p_suit", text: "婚禮正裝 (西裝/領帶/深色皮鞋/優雅套裝)" },
           { id: "p_boots", text: "防水防滑雪靴 (深紋橡膠鞋底防滑)" },
-          { id: "p_coat", text: "防風防水保暖外套" },
+          { id: "p_coat", text: "防風防水長版保暖羽絨外套" },
           { id: "p_gloves", text: "防水觸控保暖手套" },
-          { id: "p_heat", text: "發熱衣、發熱褲 (玉米式穿搭方便穿脫)" },
           { id: "p_beanie", text: "保暖毛帽 (蓋住耳朵佳)、厚圍巾" }
         ]
       },
       {
         cat: "託運行李與保養藥品",
         items: [
+          { id: "p_heat", text: "發熱衣、發熱褲 (玉米式穿搭方便穿脫)" },
+          { id: "p_swim", text: "泳衣/泳褲 (星野微笑海灘造浪池使用)" },
           { id: "p_lotion", text: "超保濕乳霜、身體乳液 (防雪地乾燥脫皮)" },
           { id: "p_lip", text: "滋潤護唇膏、保濕眼藥水" },
           { id: "p_warmer", text: "手握暖暖包、鞋底暖足貼" },
-          { id: "p_meds", text: "個人常備藥 (感冒藥、腸胃藥、止痛藥)" },
-          { id: "p_swim", text: "泳衣/泳褲 (星野微笑海灘造浪池使用)" }
+          { id: "p_meds", text: "個人常備藥 (感冒藥、腸胃藥、止痛藥)" }
         ]
       }
     ];
@@ -2429,15 +1686,11 @@
     }
 
     /* =========================================================
-       5. INITIALIZATION
+       4. INITIALIZATION
        ========================================================= */
     window.onload = function() {
       initCountdown();
-      initRate();
       renderTimeline(1);
-      renderMemberElements();
-      renderExpenses();
-      recalculateSettlement();
       renderPacking();
       renderMemos();
     };
