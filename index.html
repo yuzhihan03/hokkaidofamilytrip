@@ -377,7 +377,7 @@
           <i class="fa-solid fa-map mr-1"></i> 地點分區・城市背景深度漫遊
         </span>
         <h2 class="text-base font-black text-book-ink">雪國景點與文化背景導覽</h2>
-        <p class="text-[11px] text-book-gray font-bold">小樽與札幌皆分開獨立介紹，包含歷史開拓與周邊精選名勝</p>
+        <p class="text-[11px] text-book-gray font-bold">歷史開拓與周邊精選名勝</p>
 
         <!-- 分區切換鈕 -->
         <div class="flex justify-center gap-2 mt-3">
@@ -863,7 +863,6 @@
             title: "度假村初探索與自費用餐（推薦餐廳清單）",
             tag: "休閒漫步",
             desc: "抵達星野的第一晚自由享用美食！可搭乘園區免費巡迴巴士前往各館或 Hotalu Street 螢火蟲街，以下精選園區內超人氣推薦餐廳供大家參考：",
-            mapQuery: "Hotalu Street Tomamu",
             restaurants: [
               {
                 name: "hal 餐廳 (Restaurant mikaku / hal)",
@@ -988,7 +987,7 @@
             time: "16:30 集合 / 17:00 發車",
             category: "transport",
             important: true,
-            isMust: true,
+            isMust: false,
             title: "親友包車集合・出發前往札幌",
             tag: "45人座大巴",
             desc: "16:30 於 THE TOWER 大廳集合裝運行李，17:00 準時發車前往札幌。<br>停靠站：SAPPORO HOTEL by GRANBELL ➔ VESSEL INN SAPPORO NAKAJIMA PARK ➔ 終點札幌車站。",
@@ -1001,8 +1000,7 @@
             isMust: false,
             title: "抵達飯店入住・札幌市區精選晚餐推薦",
             tag: "市區美食",
-            desc: "辦理入住安頓好行李後，推薦徒步前往飯店周遭、狸小路與薄野商圈享受札幌代表性的在地道地美味：",
-            mapQuery: "狸小路商店街",
+            desc: "辦理入住安頓好行李後，若時間體力允許，可前往飯店周遭、狸小路與薄野商圈享受札幌代表性的在地道地美味：",
             restaurants: [
               {
                 name: "成吉思汗 達摩 本店 / 5.5店 (Daruma)",
@@ -1034,7 +1032,7 @@
       },
       4: {
         date: "12/14 (一)",
-        title: "小樽百年運河・堺町通甜點硝子深度散策",
+        title: "小樽百年運河・堺町通逛街&甜點狩獵",
         trans: "JR 快速 Airport 號 (約 35分) + 全日漫步",
         items: [
           {
@@ -1075,7 +1073,6 @@
             title: "小樽午餐・在地必吃名物餐廳推薦",
             tag: "午餐推薦",
             desc: "小樽是海鮮與傳統炸物的殿堂，以下精心整理高評價午餐名店，大家可自由挑選品嘗：",
-            mapQuery: "小樽運河 美食",
             restaurants: [
               {
                 name: "ポセイ丼 丼兵衛 小樽運河店",
@@ -1121,7 +1118,6 @@
             title: "堺町通午後甜點時光・知名名店推薦",
             tag: "下午茶推薦",
             desc: "漫步在石造歷史街道中，別錯過小樽最負盛名的浪漫下午茶與伴手禮：",
-            mapQuery: "小樽 堺町通り 甜點",
             restaurants: [
               {
                 name: "LeTAO 小樽總店 2F 咖啡廳",
@@ -1196,7 +1192,7 @@
             important: true,
             isMust: false,
             title: "長輩組退房前往機場返台",
-            desc: "長輩依班機時間搭乘 JR 前往新千歲機場辦理登機手續<br><span class='text-book-coral font-black'>※注意新退稅制度！先退稅再退運！（可參考資訊頁面）</span>",
+            desc: "長輩依班機時間搭乘 JR 前往新千歲機場辦理登機手續<br><span class='text-book-coral font-black'>※注意新退稅制度！先退稅再託運！（可參考資訊頁面）</span>",
             tag: "返台離境",
             mapQuery: "新千歲機場 國際線"
           },
@@ -1259,7 +1255,7 @@
           {
             time: "班機時間",
             category: "transport",
-            important: true,
+            important: false,
             isMust: false,
             title: "出境登機・滿載幸福平安返家",
             tag: "平安歸賦",
@@ -1454,12 +1450,12 @@
           { id: "p_pass", text: "護照實體 (效期需 6 個月以上)" },
           { id: "p_vjw", text: "填妥 Visit Japan Web (入境 QR Code 截圖)" },
           { id: "p_sim", text: "日本 eSIM 或上網漫遊卡" },
-          { id: "p_cash", text: "日幣現金 & 高海外回饋信用卡" },
+          { id: "p_cash", text: "日幣現金 & 信用卡" },
           { id: "p_power", text: "行動電源 (依規定需隨身攜帶不可託運)" }
         ]
       },
       {
-        cat: "衣著與保暖穿搭",
+        cat: "衣著 & 保暖穿搭",
         items: [
           { id: "p_suit", text: "婚禮正裝 (西裝/領帶/深色皮鞋/優雅套裝)" },
           { id: "p_boots", text: "防水防滑雪靴 (深紋橡膠鞋底防滑)" },
@@ -1470,7 +1466,7 @@
         ]
       },
       {
-        cat: "其它行李與保養藥品",
+        cat: "其它行李 & 保養藥品",
         items: [
           { id: "p_swim", text: "泳衣/泳褲 (星野微笑海灘造浪池使用)" },
           { id: "p_lotion", text: "超保濕乳霜、身體乳液 (防雪地乾燥脫皮)" },
