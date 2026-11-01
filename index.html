@@ -232,7 +232,7 @@
                 搭乘人員：<span class="text-book-coral font-black text-xs">秉原、佑珊</span>
               </div>
             </div>
-            <span class="text-xs text-book-bamboo font-black"><i class="fa-solid fa-check"></i> 早鳥組</span>
+            <span class="text-[10px] text-book-yellow font-black">第2班接駁</span>
           </div>
 
           <!-- 航班 2 -->
@@ -246,7 +246,7 @@
                 搭乘人員：<span class="text-book-coral font-black text-xs">雅琪</span>
               </div>
             </div>
-            <span class="text-[10px] text-book-water font-black">第1班接駁</span>
+            <span class="text-[10px] text-book-yellow font-black">第2班接駁</span>
           </div>
 
           <!-- 航班 3 -->
@@ -320,13 +320,13 @@
 
           <div class="bg-white p-2.5 rounded-2xl border-ink-2 space-y-1.5 shadow-book-sm">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-black text-book-ink">JR Inn 札幌站南口 (JR Inn Sapporo South)</span>
+              <span class="text-xs font-black text-book-ink">VESSEL INN SAPPORO NAKAJIMA PARK</span>
               <span class="text-[10px] bg-book-bamboo text-book-ink px-2 py-0.5 rounded-lg border-ink-2">12/13 - 12/16 (3晚)</span>
             </div>
-            <div class="text-[10px] text-book-gray">中央區北3條西1丁目 ｜ 近地下鐵大通站與札幌站</div>
+            <div class="text-[10px] text-book-gray">札幌市中央区 ｜ 距中島公園捷運站3分鐘</div>
             <div class="flex justify-between items-center pt-0.5">
               <span class="text-[10px] text-book-gray">交通樞紐便利</span>
-              <a href="https://www.google.com/maps/search/?api=1&query=JR+Inn+Sapporo+South" target="_blank" class="inline-flex items-center gap-1 px-2.5 py-1 bg-book-card hover:bg-book-yellow border-ink-2 rounded-xl text-[11px] font-black shadow-book-sm btn-press">
+              <a href="https://www.google.com/maps/search/?api=1&query=VESSEL+INN+SAPPORO+NAKAJIMA+PARK" target="_blank" class="inline-flex items-center gap-1 px-2.5 py-1 bg-book-card hover:bg-book-yellow border-ink-2 rounded-xl text-[11px] font-black shadow-book-sm btn-press">
                 <i class="fa-solid fa-location-dot text-book-coral"></i> 開啟 Google Maps
               </a>
             </div>
@@ -348,7 +348,7 @@
             <span class="text-[10px] block opacity-80 text-book-coral font-black">12/12 (六)</span>D2 婚禮大日
           </button>
           <button onclick="selectDay(3)" data-day="3" class="day-tab flex-shrink-0 px-3 py-2 rounded-2xl border-ink-2 font-black text-xs bg-white shadow-book-sm btn-press">
-            <span class="text-[10px] block opacity-80">12/13 (日)</span>D3 移往札幌
+            <span class="text-[10px] block opacity-80">12/13 (日)</span>D3 前進札幌
           </button>
           <button onclick="selectDay(4)" data-day="4" class="day-tab flex-shrink-0 px-3 py-2 rounded-2xl border-ink-2 font-black text-xs bg-white shadow-book-sm btn-press">
             <span class="text-[10px] block opacity-80">12/14 (一)</span>D4 小樽漫遊
@@ -836,23 +836,13 @@
         trans: "接駁巴士 (約 2.5 hr)",
         items: [
           {
-            time: "13:15 集合 / 13:30 發車",
-            category: "transport",
-            important: true,
-            isMust: false,
-            title: "第一班接駁巴士集合出發",
-            tag: "專車接送",
-            desc: "集合點：新千歲機場 國際線 2F 到達口 Information 資訊中心櫃檯。<br>負責人：Albee 婷羽。車程約 2.5 小時，車內請勿飲食，請先在機場簡單用餐。",
-            mapQuery: "新千歲機場 國際線 到達口"
-          },
-          {
             time: "15:00 集合 / 15:30 發車",
             category: "transport",
             important: true,
             isMust: false,
             title: "第二班接駁巴士集合出發",
             tag: "專車接送",
-            desc: "集合點：新千歲機場 國際線 2F 到達口 Information 資訊中心櫃檯。<br>負責人：鮑伯 (日文溝通：杰錕)。車程約 2.5 小時。車內請勿飲食，請先在機場簡單用餐。",
+            desc: "集合點：新千歲機場 國際線 2F 到達口 Information 資訊中心櫃檯。<br>負責人：鮑伯 (日文溝通：杰錕)。車程約 2.5 小時。<br><span class='text-book-coral font-black'>※車內請勿飲食，請先在機場簡單用餐</span>",
             mapQuery: "新千歲機場 國際線 到達口"
           },
           {
@@ -875,12 +865,6 @@
             desc: "抵達星野的第一晚自由享用美食！可搭乘園區免費巡迴巴士前往各館或 Hotalu Street 螢火蟲街，以下精選園區內超人氣推薦餐廳供大家參考：",
             mapQuery: "Hotalu Street Tomamu",
             restaurants: [
-              {
-                name: "森林餐廳 Nininupuri",
-                hours: "17:30 - 21:00",
-                feature: "百年雪松落地窗夢幻夜景，現烤牛羊豬鐵板肉食與豐盛百匯自助餐。",
-                query: "森のレストラン ニニヌプリ"
-              },
               {
                 name: "hal 餐廳 (Restaurant mikaku / hal)",
                 hours: "17:30 - 21:00",
@@ -939,10 +923,9 @@
             category: "spot",
             important: false,
             isMust: false,
-            title: "午間自由探索・霧冰平台 / 微笑海灘",
+            title: "午間自由探索",
             tag: "園區設施",
             desc: "可搭乘纜車登上海拔 1,088 公尺的霧冰平台眺望十勝雪山，或至 30°C 恆溫的微笑海灘 (Mina-Mina Beach) 享受室內溫暖波浪。",
-            mapQuery: "Mina-Mina Beach Tomamu"
           },
           {
             time: "15:30",
@@ -1008,7 +991,7 @@
             isMust: true,
             title: "親友包車集合・出發前往札幌",
             tag: "45人座大巴",
-            desc: "16:30 於 THE TOWER 大廳集合裝運行李，17:00 準時發車前往札幌。<br>停靠站：SAPPORO HOTEL by GRANBELL ➔ JR Inn 札幌站南口 ➔ 終點札幌車站。",
+            desc: "16:30 於 THE TOWER 大廳集合裝運行李，17:00 準時發車前往札幌。<br>停靠站：SAPPORO HOTEL by GRANBELL ➔ VESSEL INN SAPPORO NAKAJIMA PARK ➔ 終點札幌車站。",
             mapQuery: "SAPPORO HOTEL by GRANBELL"
           },
           {
@@ -1040,16 +1023,10 @@
                 query: "ラーメン 札幌 一粒庵"
               },
               {
-                name: "二條市場 大磯 (Ohiso)",
-                hours: "07:00 - 20:00 (近 GRANBELL)",
-                feature: "步行即達二條市場！澎湃生海膽、晶瑩剔透鮭魚卵與帝王蟹肉三色海鮮丼，海味鮮甜極致。",
-                query: "二条市場 大磯 札幌"
-              },
-              {
-                name: "根室花丸 迴轉壽司 (JR Tower Stellar Place店)",
-                hours: "11:00 - 22:00 (建議先抽號碼牌)",
-                feature: "道東根室漁港直送！厚切超大生干貝、油花豐富油鰈魚緣側，新鮮平價CP值爆表。",
-                query: "回転寿司 根室花まる JRタワーステラプレイス店"
+                name: "元祖札幌拉麵橫丁",
+                hours: "11:00 - 00:00",
+                feature: "札幌知名拉麵街，多種選擇一站解決。多數店家營業至凌晨。",
+                query: "元祖さっぽろラーメン横丁(Original Sapporo Ramen Alley)"
               }
             ]
           }
@@ -1074,10 +1051,10 @@
             time: "10:00 - 10:45",
             category: "spot",
             important: false,
-            isMust: true,
+            isMust: false,
             title: "小樽運河遊船 (Otaru Canal Cruise)",
             tag: "必去景點",
-            desc: "<strong>營業時間：10:00 - 16:00 (夜航至 20:00)</strong><br>可選擇搭乘復古遊船穿梭中央橋至小樽港，從水面仰望石造倉庫與冬日雪景的絕佳視角。",
+            desc: "<strong>營業時間：10:00 - 16:00 (夜航至 20:00)</strong><br>可選擇搭乘復古遊船穿梭中央橋至小樽港，從水面仰望石造倉庫與冬日雪景的絕佳視角。或單純散步欣賞運河美景。",
             mapQuery: "小樽運河遊船"
           },
           {
@@ -1123,17 +1100,21 @@
                 hours: "11:00 - 15:00, 17:00 - 21:00",
                 feature: "小樽70年壽司名門！壽司通首屈一指老字號，老饕指定職人現捏頂級手握壽司料理。",
                 query: "おたる政寿司 本店"
-              },
-              {
-                name: "若雞時代 なると 本店 (Naruto)",
-                hours: "11:00 - 20:30",
-                feature: "小樽靈魂鄉土美食！外皮炸至金黃薄脆、肉汁滾燙噴香的招牌炸半雞與平價壽司定食。",
-                query: "若鶏時代 なると 本店 小樽"
               }
             ]
           },
           {
-            time: "午後散策・甜點與下午茶",
+            time: "午後自由活動",
+            category: "spot",
+            important: false,
+            isMust: false,
+            title: "小樽出拔小路",
+            tag: "美食商場",
+            desc: "<strong>營業時間：11:00 - 21:00 (依各店家為準)</strong><br>重現大正與昭和風情的美食小巷，擁有地標「火警望樓」，可免費登頂俯瞰小樽運河與十字路口雪景。",
+            mapQuery: "小樽出拔小路"
+          },
+          {
+            time: "午後散步・甜點與下午茶",
             category: "food",
             important: false,
             isMust: false,
@@ -1163,27 +1144,7 @@
             ]
           },
           {
-            time: "午後自由活動 (時間不限)",
-            category: "spot",
-            important: false,
-            isMust: false,
-            title: "小樽出拔小路",
-            tag: "美食商場",
-            desc: "<strong>營業時間：11:00 - 21:00 (依各店家為準)</strong><br>重現大正與昭和風情的美食小巷，擁有地標「火警望樓」，可免費登頂俯瞰小樽運河與十字路口雪景。",
-            mapQuery: "小樽出拔小路"
-          },
-          {
-            time: "(時間不限)",
-            category: "spot",
-            important: false,
-            isMust: false,
-            title: "堺町通商店街散策",
-            tag: "歷史街道",
-            desc: "<strong>店家營業時間：約 09:00 - 18:00</strong><br>兩旁林立保留完好的百年石造洋館與倉庫，匯集各大玻璃工藝館、伴手禮店與特色咖啡館，漫步氣氛極佳。",
-            mapQuery: "堺町通り商店街"
-          },
-          {
-            time: " (時間不限)",
+            time: "自由規劃",
             category: "shopping",
             important: false,
             isMust: false,
@@ -1193,7 +1154,7 @@
             mapQuery: "ちいかわもぐもぐ本舗小樽店"
           },
           {
-            time: "(時間不限)",
+            time: "自由規劃",
             category: "spot",
             important: false,
             isMust: false,
@@ -1206,10 +1167,10 @@
             time: "16:30 集合",
             category: "activity",
             important: true,
-            isMust: true,
+            isMust: false,
             title: "【重要集合】長輩親友集合處：小樽音樂盒堂本館",
             tag: "長輩集合點",
-            desc: "<strong>集合時間：16:30 ｜ 地點：小樽音樂盒堂本館門口 (蒸氣鐘前)</strong><br>長輩們可在室內溫暖處等待或在門口集合，準備一同前往搭車返回札幌。",
+            desc: "<strong>集合時間：16:30 ｜ 地點：小樽音樂盒堂本館門口 (蒸氣鐘前)</strong><br>長輩們可在室內溫暖處等待或在門口集合，準備一同前往搭車返回札幌。其它親友可一同搭程JR返回札幌。",
             mapQuery: "小樽音樂盒堂 本館"
           },
           {
@@ -1235,7 +1196,7 @@
             important: true,
             isMust: false,
             title: "長輩組退房前往機場返台",
-            desc: "長輩依班機時間搭乘 JR 前往新千歲機場辦理登機手續，平安返台。",
+            desc: "長輩依班機時間搭乘 JR 前往新千歲機場辦理登機手續<br><span class='text-book-coral font-black'>※注意新退稅制度！先退稅再退運！（可參考資訊頁面）</span>",
             tag: "返台離境",
             mapQuery: "新千歲機場 國際線"
           },
@@ -1246,7 +1207,7 @@
             isMust: false,
             title: "A路線：札幌國際滑雪場 ｜ B路線：市區採購",
             tag: "分組自由行",
-            desc: "滑雪組搭直達巴士前往札幌國際體驗優質粉雪；購物組可攻佔大丸百貨、Bic Camera、Parco、狸小路藥妝。",
+            desc: "滑雪組自駕或搭乘大眾交通前往札幌國際體驗優質粉雪；購物組可攻佔大丸百貨、Bic Camera、Parco、狸小路藥妝。",
             mapQuery: "札幌國際滑雪場"
           },
           {
@@ -1256,7 +1217,7 @@
             isMust: false,
             title: "聚會唱歌：Jankara KTV 札幌駅前店 (參考行程 / 自由參加)",
             tag: "參考行程",
-            desc: "<strong>自由參加行程</strong>。包廂熱唱日語與中文金曲，慶祝家族旅行圓滿！",
+            desc: "<strong>自由參加行程</strong>。包廂熱唱日語與中文金曲，旅行結束前最後的歡樂gathering！",
             mapQuery: "ジャンカラ 札幌駅前店"
           }
         ]
@@ -1273,11 +1234,10 @@
             isMust: false,
             title: "飯店辦理 Check-out 退房",
             tag: "飯店退房",
-            desc: "收齊戰利品與大件行李，步行至 JR 札幌站搭車前往新千歲機場 (車程約 37 分鐘)。",
+            desc: "收齊戰利品與大件行李，至 JR 札幌站搭車前往新千歲機場 (車程約 40 分鐘)。",
             mapQuery: "JR 札幌車站"
           },
           {
-            time: "11:30 - 14:00",
             category: "shopping",
             important: false,
             isMust: true,
@@ -1290,7 +1250,7 @@
             time: "出境前必讀",
             category: "spot",
             important: true,
-            isMust: true,
+            isMust: false,
             title: "【重要須知】日本出境退稅新制流程說明",
             tag: "新退稅手續",
             desc: "日本實施全新退稅制度：市區購買一律為<strong>先含稅結帳</strong>，出境時經<strong>機場海關確認商品帶離境才退稅</strong>。<br><strong>1. 消耗品勿拆封：</strong>密封袋不可拆，拆封視同境內消費須補稅。<br><strong>2. 託運行李流程：</strong>若免稅品在行李箱中託運，報到時請先告知地勤「有退稅品」，經海關查驗櫃檯蓋章掃描後再託運。<br><strong>3. 電子機台退稅：</strong>過安檢後在海關機台掃描護照及登機證退款至信用卡或領現。",
@@ -1495,23 +1455,23 @@
           { id: "p_vjw", text: "填妥 Visit Japan Web (入境 QR Code 截圖)" },
           { id: "p_sim", text: "日本 eSIM 或上網漫遊卡" },
           { id: "p_cash", text: "日幣現金 & 高海外回饋信用卡" },
-          { id: "p_power", text: "行動電源 (依規定需隨身攜帶不可託運)" },
-          { id: "p_suit", text: "婚禮正裝 (西裝/領帶/深色皮鞋/優雅套裝)" }
+          { id: "p_power", text: "行動電源 (依規定需隨身攜帶不可託運)" }
         ]
       },
       {
-        cat: "戶外防風雪 & 防滑穿著",
+        cat: "衣著與保暖穿搭",
         items: [
+          { id: "p_suit", text: "婚禮正裝 (西裝/領帶/深色皮鞋/優雅套裝)" },
           { id: "p_boots", text: "防水防滑雪靴 (深紋橡膠鞋底防滑)" },
-          { id: "p_coat", text: "防風防水長版保暖羽絨外套" },
+          { id: "p_coat", text: "防風防水保暖外套" },
           { id: "p_gloves", text: "防水觸控保暖手套" },
+          { id: "p_heat", text: "發熱衣、發熱褲 (玉米式穿搭方便穿脫)" },
           { id: "p_beanie", text: "保暖毛帽 (蓋住耳朵佳)、厚圍巾" }
         ]
       },
       {
-        cat: "託運行李與保養藥品",
+        cat: "其它行李與保養藥品",
         items: [
-          { id: "p_heat", text: "發熱衣、發熱褲 (玉米式穿搭方便穿脫)" },
           { id: "p_swim", text: "泳衣/泳褲 (星野微笑海灘造浪池使用)" },
           { id: "p_lotion", text: "超保濕乳霜、身體乳液 (防雪地乾燥脫皮)" },
           { id: "p_lip", text: "滋潤護唇膏、保濕眼藥水" },
